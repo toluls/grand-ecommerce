@@ -6,7 +6,9 @@ html {
 
 :root {
   --brand-color-main: #31004A;
-  --brand-color-sub: #4C00A4;
+  --brand-color-main-light:#33007B;
+  --brand-color-sub: rgb(255, 204, 0);
+  --brand-color-sub-light: rgba(255, 204, 0, .9);
 }
 
 *, *::before, *::after {

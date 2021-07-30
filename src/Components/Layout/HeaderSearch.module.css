@@ -1,0 +1,37 @@
+.search {
+  display: flex;
+  padding: 1rem 2rem;
+  flex: 1 40rem;
+}
+
+.input {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 1rem 2.5rem;
+  border-radius: 5rem 0 0 5rem;
+  font-size: 2.1rem;
+  border: none;
+  outline: none;
+  border: 5px solid transparent;
+  transition: all .3s ease;
+}
+
+.input:focus {
+  border: 5px solid var(--brand-color-sub);
+}
+
+.action {
+  background-color: var(--brand-color-sub);
+  padding: 1rem 2rem;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 2.1rem;
+  border: none;
+  outline: none;
+  border-radius: 0 5rem 5rem 0;
+  transition: all .3s ease;
+}
+
+.action:hover {
+  background-color: var(--brand-color-sub-light);
+}
