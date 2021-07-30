@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 
 const App = () => {
-  return <div className="grand">Grand Fashion</div>
+  return (
+    <Fragment>
+      <div className="grand">Grand Fashion</div>
+    </Fragment>
+  )
 }
 
 export default App;

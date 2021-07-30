@@ -6,6 +6,7 @@ html {
 
 :root {
   --brand-color-main: #31004A;
+  --brand-color-sub: #4C00A4;
 }
 
 *, *::before, *::after {

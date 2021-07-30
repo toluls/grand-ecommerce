@@ -1,0 +1,5 @@
+.home {
+  background-color: var(--brand-color-sub);
+  color: white;
+  padding: 3rem 5rem;
+}
