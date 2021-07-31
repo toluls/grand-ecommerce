@@ -1,6 +1,12 @@
+@import '../../sass/mixins.scss';
+
 .brand {
   flex: 0 10rem;
   padding: .5rem;
+
+  @include respond {
+    flex: 0 15rem;
+  }
 }
 
 .brandImg {
