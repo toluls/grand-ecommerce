@@ -1,0 +1,28 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.navBar {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background-color: $color-black;
+  color: $color-white;
+  padding: 1rem;
+  
+  & a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  @include respond {
+    font-size: 1.7rem;
+  }
+
+  &Item {
+    padding: .5rem 1rem;
+
+    &:hover {
+      color: $brand-color-sub;
+    }
+  }
+}
