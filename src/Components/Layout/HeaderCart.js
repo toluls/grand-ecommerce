@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './HeaderCart.module.css';
+import classes from './HeaderCart.module.scss';
 import { CartIcon } from '../UI/Icons';
 
 const HeaderCart = () => {

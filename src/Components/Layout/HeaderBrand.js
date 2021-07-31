@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './HeaderBrand.module.css';
+import classes from './HeaderBrand.module.scss';
 import logo from '../../assets/img/grand-web.png';
 
 const HeaderBrand = () => {

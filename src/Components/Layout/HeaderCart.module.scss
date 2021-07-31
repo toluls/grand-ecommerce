@@ -1,0 +1,27 @@
+@import '../../sass/variables.scss';
+
+.cart {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center; 
+  margin: 1rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: $color-white;
+  font-size: 2.5rem;
+  transition: all .3s;
+
+  &:hover {
+    color: $color-black;
+  }
+}
+
+// .cartIcon {
+//   font-size: 3rem;
+// }
+
+.cartText {
+  font-weight: 600;
+  margin-left: 1rem;
+}

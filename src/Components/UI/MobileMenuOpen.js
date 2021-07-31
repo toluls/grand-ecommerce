@@ -1,6 +1,6 @@
 import React from 'react';
 import { MenuOpenIcon } from './Icons';
-import classes from './MobileMenuOpen.module.css';
+import classes from './MobileMenuOpen.module.scss';
 
 const MobileMenuOpen = props => {
   return (

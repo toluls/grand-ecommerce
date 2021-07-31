@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
+@import './sass/variables.scss';
+
 html {
   font-size: 10px;
 }
 
-:root {
-  --brand-color-main: #31004A;
-  --brand-color-main-light:#8300C4;
-  --brand-color-sub: rgb(255, 204, 0);
-  --brand-color-sub-light: rgba(255, 204, 0, .9);
-  --large-screen: 750px;
-}
+// :root {
+//   --brand-color-main: #31004A;
+// }
 
 *, *::before, *::after {
   padding: 0;
@@ -23,9 +21,8 @@ body {
   font-size: 1.7rem;
 }
 
-
 .grand {
-  background-color: var(--brand-color-main);
-  color: white;
-  padding: 3rem 5rem;
+  padding: 2rem;
+  background-color: $color-black;
+  color: $color-white;
 }

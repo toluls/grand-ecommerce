@@ -1,0 +1,35 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.header {
+  background-color: $brand-color-main;
+  padding: .5rem;
+
+  @include respond {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+}
+
+.section1 {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  padding: .5rem;
+
+  @include respond {
+    flex: 1;
+  }
+}
+
+.section2 {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  @include respond {
+    flex: 2;
+  }
+}

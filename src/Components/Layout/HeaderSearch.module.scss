@@ -1,0 +1,42 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.search {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.input {
+  background-color: $color-white;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3rem 0 0 3rem;
+  border: none;
+  outline: none;
+  border: 3px solid $brand-color-sub;
+
+  &:focus {
+    border: 3px solid $color-white;
+  }
+
+  @include respond {
+    flex: 1;
+  }
+}
+
+.action {
+  background-color: $brand-color-sub;
+  padding: 1rem;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 0 3rem 3rem 0;
+  transition: all .3s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $brand-color-sub-light;
+  }
+}
