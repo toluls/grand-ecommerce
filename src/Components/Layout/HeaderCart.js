@@ -8,7 +8,7 @@ const HeaderCart = () => {
         <div className={classes.cartIcon}>
         <CartIcon />
         </div>
-        <div className={classes.cartText}>99</div>
+        <div className={classes.cartText}>0</div>
       </div>
   )
 }
