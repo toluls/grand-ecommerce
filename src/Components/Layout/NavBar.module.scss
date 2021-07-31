@@ -1,7 +1,7 @@
 @import '../../sass/variables.scss';
 @import '../../sass/mixins.scss';
 
-.navBar {
+.navbar {
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -18,7 +18,7 @@
     font-size: 1.7rem;
   }
 
-  &Item {
+  &__item {
     padding: .5rem 1rem;
 
     &:hover {

@@ -4,10 +4,10 @@ import classes from './NavBar.module.scss';
 
 const NavBar = () => {
   return (
-    <div className={classes.navBar}>
-      <Link to="/products" className={classes.navBarItem}>Today's Deals</Link>
-      <Link to="/wish-list" className={classes.navBarItem}>Wish List</Link>
-      <Link to="/customer-service" className={classes.navBarItem}>Help</Link>
+    <div className={classes.navbar}>
+      <Link to="/products" className={classes.navbar__item}>Today's Deals</Link>
+      <Link to="/wish-list" className={classes.navbar__item}>Wish List</Link>
+      <Link to="/customer-service" className={classes.navbar__item}>Help</Link>
     </div>
   );
 }

@@ -16,13 +16,9 @@
   &:hover {
     color: $color-black;
   }
-}
 
-// .cartIcon {
-//   font-size: 3rem;
-// }
-
-.cartText {
-  font-weight: 600;
-  margin-left: 1rem;
+  &__text {
+    font-weight: 600;
+    margin-left: 1rem;
+  }
 }

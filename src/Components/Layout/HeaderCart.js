@@ -6,10 +6,10 @@ import { CartIcon } from '../UI/Icons';
 const HeaderCart = () => {
   return (
     <Link to="/cart" className={classes.cart}>
-      <div className={classes.cartIcon}>
+      <div className={classes.cart__icon}>
       <CartIcon />
       </div>
-      <div className={classes.cartText}>0</div>
+      <div className={classes.cart__text}>0</div>
     </Link>
   )
 }
