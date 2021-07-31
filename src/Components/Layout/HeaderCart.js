@@ -1,9 +1,15 @@
 import React from 'react';
 import classes from './HeaderCart.module.css';
+import { CartIcon } from '../UI/Icons';
 
 const HeaderCart = () => {
   return (
-      <div className={classes.cart}>Cart</div>
+      <div className={classes.cart}>
+        <div className={classes.cartIcon}>
+        <CartIcon />
+        </div>
+        <div className={classes.cartText}>99</div>
+      </div>
   )
 }
 

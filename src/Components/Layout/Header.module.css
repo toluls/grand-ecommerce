@@ -1,7 +1,16 @@
 .header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   background-color: var(--brand-color-main);
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.section1 {
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+}
+
+.section2 {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
 }

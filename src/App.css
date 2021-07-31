@@ -6,9 +6,10 @@ html {
 
 :root {
   --brand-color-main: #31004A;
-  --brand-color-main-light:#33007B;
+  --brand-color-main-light:#8300C4;
   --brand-color-sub: rgb(255, 204, 0);
   --brand-color-sub-light: rgba(255, 204, 0, .9);
+  --large-screen: 750px;
 }
 
 *, *::before, *::after {
@@ -19,8 +20,9 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
+
 
 .grand {
   background-color: var(--brand-color-main);
