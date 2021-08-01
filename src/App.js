@@ -8,6 +8,8 @@ import NotFound from './Components/Sections/NotFound';
 import AppLayout from './Components/Layout/AppLayout';
 import WishlistSection from './Components/Sections/Wishlist';
 import CartSection from './Components/Sections/Cart';
+import ProductCategory from './Components/Sections/ProductCategory';
+import ProductDetails from './Components/Sections/ProductDetails';
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Switch>
         <Route path="/" component={HomeSection} exact />
         <Route path="/products" component={ProductSection} exact />
+        <Route path="/products/:productCategory" component={ProductCategory} exact />
+        <Route path="/products/id/:productId" component={ProductDetails} exact />
         <Route path="/wish-list" component={WishlistSection} exact />
         <Route path="/customer-service" component={CustomerServiceSection} exact />
         <Route path="/cart" component={CartSection} exact />
