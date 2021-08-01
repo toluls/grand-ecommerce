@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart, faSearch, faBars, faTimes, faHome, faHeart, faTshirt, faTv, faLaptop, faQuestionCircle, faDotCircle, faMobileAlt, faSpa } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart, faSearch, faBars, faTimes, faHome, faHeart, faTshirt, faTv, faLaptop, faQuestionCircle, faDotCircle, faMobileAlt, faSpa, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 
 export const CartIcon = () => {
@@ -21,6 +21,10 @@ export const MenuCloseIcon = () => {
 
 export const SpaIcon = () => {
   return <FontAwesomeIcon icon={faSpa} />;
+};
+
+export const ArrowUpIcon = () => {
+  return <FontAwesomeIcon icon={faCaretUp} />;
 };
 
 export const HomeIcon = () => {
