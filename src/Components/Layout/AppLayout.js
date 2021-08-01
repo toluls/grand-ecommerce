@@ -1,14 +1,17 @@
 import React, { Fragment } from 'react';
+import { useSelector } from 'react-redux';
 import Header from './Header';
 import Footer from './Footer';
 import TopNav from './TopNav';
-// import MainNav from './MainNav';
+import MainNav from './MainNav';
 
 const AppLayout = props => {
+  const navOpen = useSelector(state => state.navOpen);
+
   return (
     <Fragment>
       <Header />
-      {/* <MainNav /> */}
+      {navOpen && <MainNav />}
       <TopNav />
       <main>{props.children}</main>
       <Footer />

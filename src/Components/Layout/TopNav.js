@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import classes from './TopNav.module.scss';
 import { MenuOpenIcon } from '../UI/Icons';
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+
+  const openMenuHandler = () => {
+    dispatch({ type: 'NAV', value: true });
+  }
+
   return (
     <div className={classes.topnav}>
-      <div className={classes.topnav__item}>
+      <div className={classes.topnav__item} onClick={openMenuHandler}>
         <span className={classes.topnav__icon}><MenuOpenIcon /></span>
          All
       </div>
