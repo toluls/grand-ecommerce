@@ -1,16 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './MainNav.module.scss';
-import { HomeIcon, CartIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon } from '../UI/Icons';
+import { SpaIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon } from '../UI/Icons';
 
 const MainNav = () => {
   return (
     <div className={classes.nav}>
-        <Link to="/" className={classes.nav__item}>
-          <span className={classes.nav__icon}><HomeIcon /></span>          
-          Home
-        </Link>
-
         <Link to="/products" className={classes.nav__item}>
           <span className={classes.nav__icon}><ProductIcon /></span>          
           All Products
@@ -27,7 +22,7 @@ const MainNav = () => {
         </Link>
 
         <Link to="/products" className={classes.nav__item}>
-          <span className={classes.nav__icon}><HomeIcon /></span>          
+          <span className={classes.nav__icon}><SpaIcon /></span>          
           Beauty
         </Link>
 
@@ -39,11 +34,6 @@ const MainNav = () => {
         <Link to="/products" className={classes.nav__item}>
           <span className={classes.nav__icon}><PhoneIcon /></span>          
           Phones
-        </Link>
-
-        <Link to="/products" className={classes.nav__item}>
-          <span className={classes.nav__icon}><CartIcon /></span>          
-          Cart
         </Link>
 
         <Link to="/wish-list" className={classes.nav__item}>

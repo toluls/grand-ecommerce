@@ -1,3 +1,40 @@
+@import '../../sass/mixins.scss';
+@import '../../sass/variables.scss';
+
 .home {
-  padding: 3rem 5rem;
+  width: 100%;
+  background-color: $color-grey;
+
+  &__header {
+    @include respond {
+      padding: 2rem;
+      display: flex;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include respond {
+      display: block;
+      background-color: $color-white;
+      border-radius: 1rem;
+      margin-right: 2rem;
+      flex: 0 30rem;
+    }
+  }
+
+  &__slider {
+    @include respond { 
+      width: 100%;
+      border-radius: 1rem;
+      overflow: hidden;
+      flex: 1;
+      background-color: $brand-color-main;
+    }
+  }
+
+  &_products {
+    padding: 1rem 2rem;
+  }
 }

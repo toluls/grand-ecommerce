@@ -8,6 +8,10 @@
 
   &__item {
     padding: 1rem;
+
+    &:hover {
+      color: $brand-color-main;
+    }
   }
 
   &__icon {
