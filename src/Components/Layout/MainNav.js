@@ -11,27 +11,27 @@ const MainNav = () => {
           All Products
         </Link>
 
-        <Link to="/products" className={classes.nav__item}>
+        <Link to="/products/electronics" className={classes.nav__item}>
           <span className={classes.nav__icon}><TvIcon /></span>          
           Electronics
         </Link>
 
-        <Link to="/products" className={classes.nav__item}>
+        <Link to="/products/fashion" className={classes.nav__item}>
           <span className={classes.nav__icon}><FashionIcon /></span>          
           Fashion
         </Link>
 
-        <Link to="/products" className={classes.nav__item}>
+        <Link to="/products/beauty" className={classes.nav__item}>
           <span className={classes.nav__icon}><SpaIcon /></span>          
           Beauty
         </Link>
 
-        <Link to="/products" className={classes.nav__item}>
+        <Link to="/products/computing" className={classes.nav__item}>
           <span className={classes.nav__icon}><ComputingIcon /></span>          
           Computing
         </Link>
 
-        <Link to="/products" className={classes.nav__item}>
+        <Link to="/products/phones" className={classes.nav__item}>
           <span className={classes.nav__icon}><PhoneIcon /></span>          
           Phones
         </Link>
