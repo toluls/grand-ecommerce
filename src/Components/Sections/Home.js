@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Home.module.scss';
 import ProductDisplay from '../Products/ProductDisplay';
-import MainNav from '../Layout/MainNav';
+import NavContent from '../Layout/NavContent';
 import TopSlider from '../UI/TopSlider';
 
 
@@ -10,7 +10,7 @@ const HomeSection = props => {
     <div className={classes.home}>
       <div className={classes.home__header}>
         <nav className={classes.home__nav}>
-          <MainNav />
+          <NavContent />
         </nav>
         <div className={classes.home__slider}>
           <TopSlider />

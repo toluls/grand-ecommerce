@@ -1,50 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import classes from './MainNav.module.scss';
-import { SpaIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon } from '../UI/Icons';
+import NavContent from './NavContent';
+import brandLogo from '../../assets/img/grand-web.png';
+import { MenuCloseIcon } from '../UI/Icons';
 
-const MainNav = () => {
+const MainNav = props => {
   return (
     <div className={classes.nav}>
-        <Link to="/products" className={classes.nav__item}>
-          <span className={classes.nav__icon}><ProductIcon /></span>          
-          All Products
-        </Link>
-
-        <Link to="/products/electronics" className={classes.nav__item}>
-          <span className={classes.nav__icon}><TvIcon /></span>          
-          Electronics
-        </Link>
-
-        <Link to="/products/fashion" className={classes.nav__item}>
-          <span className={classes.nav__icon}><FashionIcon /></span>          
-          Fashion
-        </Link>
-
-        <Link to="/products/beauty" className={classes.nav__item}>
-          <span className={classes.nav__icon}><SpaIcon /></span>          
-          Beauty
-        </Link>
-
-        <Link to="/products/computing" className={classes.nav__item}>
-          <span className={classes.nav__icon}><ComputingIcon /></span>          
-          Computing
-        </Link>
-
-        <Link to="/products/phones" className={classes.nav__item}>
-          <span className={classes.nav__icon}><PhoneIcon /></span>          
-          Phones
-        </Link>
-
-        <Link to="/wish-list" className={classes.nav__item}>
-          <span className={classes.nav__icon}><HeartIcon /></span>          
-          Wish List
-        </Link>
-
-        <Link to="/customer-service" className={classes.nav__item}>
-          <span className={classes.nav__icon}><HelpIcon /></span>          
-          Customer Service
-        </Link>
+      <div className={classes.nav__backdrop}></div>
+      <div className={classes.nav__content}>
+        <div className={classes.nav__header}>
+        <div className={classes.nav__logo}>
+          <img src={brandLogo} className={classes.nav__img} alt="Grand Fashion logo" />
+        </div>
+        <div className={classes.nav__button}>
+          <MenuCloseIcon />
+        </div>
+        </div>
+        <NavContent />
+      </div>
     </div>
   );
 }
