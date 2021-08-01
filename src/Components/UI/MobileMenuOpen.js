@@ -4,7 +4,7 @@ import classes from './MobileMenuOpen.module.scss';
 
 const MobileMenuOpen = props => {
   return (
-    <div className={classes.menuOpen}>
+    <div className={classes.menu}>
       <MenuOpenIcon />
     </div>
   )

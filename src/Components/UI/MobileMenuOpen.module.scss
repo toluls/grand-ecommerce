@@ -1,11 +1,12 @@
-.menuOpen {
-  color: #ffffff;
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+
+.menu {
+  color: $color-white;
   font-size: 2.3rem;
   padding: .5rem;
-}
 
-@media screen and (min-width: 750px) {
-  .menuOpen {
+  @include respond {
     display: none;
   }
 }
