@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { uiActions } from '../../Store/ui-slice';
+import { cartActions } from '../../Store/cart-slice';
 import classes from './TopNav.module.scss';
 import { MenuOpenIcon } from '../UI/Icons';
 
@@ -8,7 +10,8 @@ const NavBar = () => {
   const dispatch = useDispatch();
 
   const openMenuHandler = () => {
-    dispatch({ type: 'NAV', value: true });
+    dispatch(uiActions.openNav(true));
+    dispatch(cartActions.addToCart());
   }
 
   return (

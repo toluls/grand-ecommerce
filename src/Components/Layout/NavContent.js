@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { uiActions } from '../../Store/ui-slice';
 import classes from './NavContent.module.scss';
 import { SpaIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon, HomeIcon } from '../UI/Icons';
 
 const NavContent = () => {
   const dispatch = useDispatch();
   const closeMenuHandler = () => {
-    dispatch({ type: 'NAV', value: false });
+    dispatch(uiActions.openNav(false));
   }
 
   return (

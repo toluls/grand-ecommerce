@@ -6,7 +6,7 @@ import TopNav from './TopNav';
 import MainNav from './MainNav';
 
 const AppLayout = props => {
-  const navOpen = useSelector(state => state.navOpen);
+  const navOpen = useSelector(state => state.ui.navOpen);
 
   return (
     <Fragment>

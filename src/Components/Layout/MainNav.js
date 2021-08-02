@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { uiActions } from '../../Store/ui-slice';
 import classes from './MainNav.module.scss';
 import NavContent from './NavContent';
 import brandLogo from '../../assets/img/grand-web.png';
@@ -9,7 +10,7 @@ const MainNav = () => {
   const dispatch = useDispatch();
 
   const closeMenuHandler = () => {
-    dispatch({ type: 'NAV', value: false });
+    dispatch(uiActions.openNav(false));
   }
 
   return (
