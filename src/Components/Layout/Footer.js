@@ -31,7 +31,7 @@ const Footer = () => {
           </p>
           <p className={classes.footer__item}>
             <Link to="/wish-list" className={classes.footer__link}>
-              Wishlist
+              Today's Deals
             </Link>
           </p>
           <p className={classes.footer__item}>

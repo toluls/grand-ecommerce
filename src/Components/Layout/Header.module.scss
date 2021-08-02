@@ -26,7 +26,7 @@
 
 .section2 {
   display: flex;
-  flex-flow: row;
+  flex-flow: row nowrap;
   align-items: center;
 
   @include respond {

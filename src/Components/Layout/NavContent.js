@@ -55,12 +55,6 @@ const NavContent = () => {
           Phones
         </Link>
 
-        <Link to="/wish-list" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><HeartIcon /></span>          
-          Wish List
-        </Link>
-
         <Link to="/customer-service" className={classes.nav__item}
         onClick={closeMenuHandler}>
           <span className={classes.nav__icon}><HelpIcon /></span>          

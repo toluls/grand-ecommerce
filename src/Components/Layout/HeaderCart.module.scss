@@ -1,6 +1,6 @@
 @import '../../sass/variables.scss';
 
-.cart {
+.cart { 
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -20,5 +20,9 @@
   &__text {
     font-weight: 600;
     margin-left: 1rem;
+  }
+
+  &__touched {
+    color: $color-black;
   }
 }

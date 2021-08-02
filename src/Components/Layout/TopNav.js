@@ -11,7 +11,6 @@ const NavBar = () => {
 
   const openMenuHandler = () => {
     dispatch(uiActions.openNav(true));
-    dispatch(cartActions.addToCart());
   }
 
   return (
@@ -21,8 +20,7 @@ const NavBar = () => {
          MENU
       </div>
       <Link to="/products" className={classes.topnav__item}>Today's Deals</Link>
-      <Link to="/wish-list" className={classes.topnav__item}>Wish List</Link>
-      <Link to="/customer-service" className={classes.topnav__item}>Help</Link>
+      <Link to="/customer-service" className={classes.topnav__item} onClick={() => dispatch(cartActions.addToCart())}>Customer Service</Link>
     </div>
   );
 }
