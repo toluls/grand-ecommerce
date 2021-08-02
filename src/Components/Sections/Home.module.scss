@@ -6,7 +6,7 @@
   background-color: $color-grey;
 
   &__header {
-    @include respond {
+    @include respond($large-screen) {
       padding: 2rem;
       display: flex;
     }
@@ -15,7 +15,7 @@
   &__nav {
     display: none;
 
-    @include respond {
+    @include respond($large-screen) {
       display: block;
       background-color: $color-white;
       border-radius: 1rem;

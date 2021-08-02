@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className={classes.topnav}>
       <div className={classes.topnav__item} onClick={openMenuHandler}>
         <span className={classes.topnav__icon}><MenuOpenIcon /></span>
-         All
+         MENU
       </div>
       <Link to="/products" className={classes.topnav__item}>Today's Deals</Link>
       <Link to="/wish-list" className={classes.topnav__item}>Wish List</Link>

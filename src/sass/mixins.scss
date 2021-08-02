@@ -1,5 +1,7 @@
-@mixin respond {
-  @media (min-width: 750px) {
+@import './variables.scss';
+
+@mixin respond($pixels: $mid-screen) {
+  @media (min-width: $pixels) {
     @content;
   };
 };

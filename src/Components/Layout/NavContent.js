@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import classes from './NavContent.module.scss';
-import { SpaIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon } from '../UI/Icons';
+import { SpaIcon, HeartIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, PhoneIcon, HomeIcon } from '../UI/Icons';
 
 const NavContent = () => {
   const dispatch = useDispatch();
@@ -12,6 +12,12 @@ const NavContent = () => {
 
   return (
     <div className={classes.nav}>
+      <Link to="/" className={classes.nav__item}
+        onClick={closeMenuHandler}>
+          <span className={classes.nav__icon}><HomeIcon /></span>          
+          Home
+        </Link>
+
         <Link to="/products" className={classes.nav__item}
         onClick={closeMenuHandler}>
           <span className={classes.nav__icon}><ProductIcon /></span>          
