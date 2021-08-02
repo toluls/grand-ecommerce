@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  cart: [],
+  items: [],
   totalQuantity: 0
 }
 
@@ -11,7 +11,7 @@ const cartSlice = createSlice({
   reducers: {
     addToCart(state, action) {
       // just testing the redux toolkit implementation, will soon remoove.
-      state.totalQuantity++;
+      state.items.push('one');
     },
     removeFromCart(state, action) {
       //

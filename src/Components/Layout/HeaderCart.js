@@ -6,7 +6,7 @@ import { CartIcon } from '../UI/Icons';
 
 const HeaderCart = () => {
   const [cartIsTouched, setCartIsTouched] = useState(false);
-  const cartQuantity = useSelector(state => state.cart.totalQuantity);
+  const cartQuantity = useSelector(state => state.cart.items.length);
 
   useEffect(() => {
     if (cartQuantity === 0) {
