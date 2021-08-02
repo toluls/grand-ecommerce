@@ -1,0 +1,21 @@
+@import '../../sass/variables.scss';
+
+.load {
+  margin: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: $color-grey-light;
+  border: 1rem solid $brand-color-sub;
+  border-top-color: $brand-color-main;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
