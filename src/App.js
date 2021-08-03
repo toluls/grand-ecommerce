@@ -7,7 +7,6 @@ import ProductSection from './Components/Sections/Products';
 import CustomerServiceSection from './Components/Sections/CustomerService';
 import NotFound from './Components/Sections/NotFound';
 import AppLayout from './Components/Layout/AppLayout';
-import WishlistSection from './Components/Sections/Wishlist';
 import CartSection from './Components/Sections/Cart';
 import ProductCategory from './Components/Sections/ProductCategory';
 import ProductDetails from './Components/Sections/ProductDetails';
@@ -27,7 +26,6 @@ const App = () => {
         <Route path="/products" component={ProductSection} exact />
         <Route path="/products/:productCategory" component={ProductCategory} exact />
         <Route path="/products/id/:productId" component={ProductDetails} exact />
-        <Route path="/wish-list" component={WishlistSection} exact />
         <Route path="/customer-service" component={CustomerServiceSection} exact />
         <Route path="/cart" component={CartSection} exact />
         <Route path="*" component={NotFound} />
