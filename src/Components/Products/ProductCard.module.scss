@@ -1,16 +1,21 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
 
 .product {
-  flex: 0 20rem;
+  flex: 0 15rem;
+  margin: 1rem 0;
   padding: 1rem;
-  margin: 1rem;
   background-color: $color-white;
   overflow: hidden;
   text-align: center;
-  // border-radius: 1rem;
   transition: all .2s;
   text-decoration: none;
   color: $color-black;
+
+  @include respond {
+    flex: 0 20rem;
+    margin: 1rem;
+  }
 
   &:hover {
     box-shadow: 1px 2px 10px rgba(0, 0, 0, .2);
@@ -20,7 +25,6 @@
   &__price {
     font-weight: 600;
     padding-top: 1rem;
-    // color: $brand-color-main;
   }
 
   &__image {
