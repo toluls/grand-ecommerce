@@ -3,7 +3,7 @@
 
 .home {
   width: 100%;
-  background-color: $color-grey;
+  background-color: $color-grey-light;
 
   &__header {
     @include respond($large-screen) {
