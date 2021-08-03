@@ -14,7 +14,7 @@ const ProductDisplay = props => {
 
   return (
     <div className={classes.products}>
-      <div className={classes.products__latest}>Latest Products</div>
+      <div className={classes.products__latest}>{props.heading || 'Latest Products'}</div>
       <div className={classes.products__display}>
       {/* load all products */}
       {

@@ -12,10 +12,8 @@ const ProductSection = () => {
 
   return (
     <div className={classes.products}>
-      <div className={classes.banner}>
-        <BannerDisplay image={displayAd4} />
-      </div>
-      <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd3} />
+      <BannerDisplay image={displayAd4} />
+      <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd3} heading="Great Deals For Today" />
     </div>
   );
 }
