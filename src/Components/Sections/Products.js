@@ -1,10 +1,23 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import classes from './Products.module.scss';
+import ProductDisplay from '../Products/ProductDisplay';
+import BannerDisplay from '../UI/BannerDisplay';
+import displayAd4 from '../../assets/img/adImage_4.jpg';
+import displayAd3 from '../../assets/img/adImage_3.jpg';
+import classes from './Products.module.scss';
 
-const ProductSection = props => {
+const ProductSection = () => {
+  const isLoading = useSelector(state => state.products.isLoading);
   const products = useSelector(state => state.products.products);
-return <div className="grand">Products: {products.length > 0 ? products.length : 'Nothing for now!'}</div>
+
+  return (
+    <div className={classes.products}>
+      <div className={classes.banner}>
+        <BannerDisplay image={displayAd4} />
+      </div>
+      <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd3} />
+    </div>
+  );
 }
 
 export default ProductSection;

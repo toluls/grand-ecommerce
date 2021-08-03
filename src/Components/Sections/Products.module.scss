@@ -1,0 +1,15 @@
+@import '../../sass/variables.scss';
+
+.products {
+  width: 100%;
+  background-color: $color-grey;
+}
+
+.banner {
+  padding: 2rem;
+}
+
+.bannerImg {
+  width: 100%;
+  border-radius: 1rem;
+}

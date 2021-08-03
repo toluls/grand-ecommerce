@@ -1,13 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import classes from './ProductDisplay.module.scss';
 import ProductCard from './ProductCard';
 import LoadingProducts from './LoadingProducts';
-
+import BannerDisplay from '../UI/BannerDisplay';
 
 const ProductDisplay = props => {
-  const productIsLoading = useSelector(state => state.products.isLoading);
-  const products = useSelector(state => state.products.products);
+  const productIsLoading = props.isLoading;
+  const products = props.products;
 
   const productsToDisplay = products.map(product => <ProductCard key={product.id} id={product.id} name={product.title} image={product.image} price={product.price} />);
 
@@ -25,7 +24,7 @@ const ProductDisplay = props => {
         }
       </div>
       <div className={classes.products__advert}>
-        <img src={props.adImage} alt="Grand display ad" className={classes.adImage} />
+        <BannerDisplay image={props.adImage} />
       </div>
       <div className={classes.products__recent}>People Recently Bought</div>
       <div className={classes.products__suggests}>
