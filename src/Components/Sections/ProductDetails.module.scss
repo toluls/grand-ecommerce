@@ -1,0 +1,134 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+@import '../../sass/placeholders.scss';
+
+.product {
+  width: 100%;
+  background-color: $color-grey;
+}
+
+.top_section {
+  display: flex;
+}
+
+.content {
+  background-color: $color-white;
+  padding: 2rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  flex: 1;
+  @extend %boxShadow; 
+
+  @include respond {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.image {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  flex: 1;
+
+  & img {
+    width: 100%;
+  }
+}
+
+.description {
+  padding: 1rem;
+  padding-bottom: 3rem;
+  flex: 1;
+}
+
+.details {
+  visibility: visible;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 400;
+  border-bottom: 2px solid $color-grey;
+  padding: 1rem;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.banner {
+  display: none;
+  @extend %boxShadow;
+
+  @include respond(1100px) {
+    display: flex;
+    background-color: $color-white;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 1rem; 
+    flex: 0 20rem; 
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+  border-bottom: 2px solid $color-grey;
+
+}
+
+.input {
+  @extend %button;
+  padding: 1rem;
+  flex: 0 7rem;
+  border-radius: 1rem;
+  border: 2px solid $brand-color-sub;
+}
+
+.button {
+  @extend %button;
+  padding: 1rem;
+  flex: 2;
+  margin-left: 1rem;
+  background-color: $brand-color-sub;
+  border-radius: 1rem;
+}
+
+.detailed_info {
+  padding: 1rem;
+}
+
+.info_title {
+  font-weight: 600;
+  padding-bottom: 2rem;
+}
+
+.suggestion {
+  visibility: visible;
+}
+
+.viewed {
+  background-color: $brand-color-sub;
+  padding: 2rem 1rem;
+  font-weight: 600;
+
+  &_products {
+    padding: 2rem 1rem; 
+    display: flex;  
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+}
+  
+
+
+

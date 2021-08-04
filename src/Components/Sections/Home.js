@@ -1,10 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import classes from './Home.module.scss';
 import ProductDisplay from '../Products/ProductDisplay';
+import { useSelector } from 'react-redux';
+import displayAd1 from '../../assets/img/adImage_1.jpg';
 import NavContent from '../Layout/NavContent';
 import TopSlider from '../UI/TopSlider';
-import displayAd1 from '../../assets/img/adImage_1.jpg';
 
 const HomeSection = () => {
   const isLoading = useSelector(state => state.products.isLoading);
