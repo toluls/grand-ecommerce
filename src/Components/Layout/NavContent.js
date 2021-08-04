@@ -7,60 +7,33 @@ import { SpaIcon, FashionIcon, TvIcon, ComputingIcon, HelpIcon, ProductIcon, Pho
 
 const NavContent = () => {
   const dispatch = useDispatch();
+
   const closeMenuHandler = () => {
     dispatch(uiActions.openNav(false));
   }
 
+  const NavItem = props => {
+    return (
+      <li className={classes.nav__item}>
+        <Link to={props.to} onClick={closeMenuHandler}>
+          <span className={classes.nav__icon}>{props.icon}</span>          
+          {props.text}
+        </Link>
+      </li>
+    );
+  }
+
   return (
-    <div className={classes.nav}>
-      <Link to="/" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><HomeIcon /></span>          
-          Home
-        </Link>
-
-        <Link to="/products" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><ProductIcon /></span>          
-          All Products
-        </Link>
-
-        <Link to="/products/electronics" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><TvIcon /></span>          
-          Electronics
-        </Link>
-
-        <Link to="/products/fashion" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><FashionIcon /></span>          
-          Fashion
-        </Link>
-
-        <Link to="/products/beauty" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><SpaIcon /></span>          
-          Beauty
-        </Link>
-
-        <Link to="/products/computing" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><ComputingIcon /></span>          
-          Computing
-        </Link>
-
-        <Link to="/products/phones" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><PhoneIcon /></span>          
-          Phones
-        </Link>
-
-        <Link to="/customer-service" className={classes.nav__item}
-        onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}><HelpIcon /></span>          
-          Customer Service
-        </Link>
-    </div>
+    <ul className={classes.nav}>
+      <NavItem to="/" text="Home" icon={<HomeIcon />} />
+      <NavItem to="/products" text="All Products" icon={<ProductIcon />} />
+      <NavItem to="/products/electronics" text="Electronics" icon={<TvIcon />} />
+      <NavItem to="/products/fashion" text="Fashion" icon={<FashionIcon />} />
+      <NavItem to="/products/beauty" text="Beauty" icon={<SpaIcon />} />
+      <NavItem to="/products/computing" text="Computing" icon={<ComputingIcon />} />
+      <NavItem to="/products/phones" text="Phones" icon={<PhoneIcon />} />
+      <NavItem to="/customer-service" text="Customer Service" icon={<HelpIcon />} />
+    </ul>
   );
 }
 

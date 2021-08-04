@@ -2,43 +2,28 @@
 
 .products {
   width: 100%;
+}
 
-  &__latest {
-    margin: 1rem 0;
-    padding: 1rem;
-    padding-left: 2rem;
-    background-color: $brand-color-sub;
-    color: $color-black;
-    font-weight: 600;
-  }
+.latest, .recent {
+  margin: 1rem 0;
+  padding: 1rem;
+  padding-left: 2rem;
+  background-color: $brand-color-sub;
+  color: $color-black;
+  font-weight: 600;
+}
 
-  &__recent {
-    margin: 1rem 0;
-    padding: 1rem;
-    padding-left: 2rem;
-    background-color: $brand-color-main;
-    color: $color-white;
-    font-weight: 600;
-  }
+.recent {
+  color: $color-white;
+}
 
-  &__display {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 1rem;    
-    margin: 2rem 1rem;
-  }
+.display, .suggests {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 
-  &__suggests {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 1rem; 
-    margin: 2rem 1rem;
-  }
-
-  &__advert {
-    background-color: $color-white;
-    margin: 1rem 0 2rem 0;
-  }
+.advert {
+  background-color: $color-white;
+  margin: 1rem 0 2rem 0;
 }

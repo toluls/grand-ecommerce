@@ -14,12 +14,12 @@ const NavBar = () => {
 
   return (
     <div className={classes.topnav}>
-      <div className={classes.topnav__item} onClick={openMenuHandler}>
-        <span className={classes.topnav__icon}><MenuOpenIcon /></span>
+      <div className={classes.item} onClick={openMenuHandler}>
+        <span className={classes.icon}><MenuOpenIcon /></span>
          MENU
       </div>
-      <Link to="/products" className={classes.topnav__item}>Today's Deals</Link>
-      <Link to="/customer-service" className={classes.topnav__item}>Customer Service</Link>
+      <Link to="/products" className={classes.item}>Today's Deals</Link>
+      <Link to="/customer-service" className={classes.item}>Customer Service</Link>
     </div>
   );
 }

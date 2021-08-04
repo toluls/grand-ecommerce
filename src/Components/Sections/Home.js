@@ -12,16 +12,16 @@ const HomeSection = () => {
   
   return (
     <div className={classes.home}>
-      <div className={classes.home__header}>
-        <nav className={classes.home__nav}>
+      <div className={classes.header}>
+        <nav className={classes.nav}>
           <NavContent />
         </nav>
-        <div className={classes.home__slider}>
+        <div className={classes.slider}>
           <TopSlider />
         </div>
       </div>
       
-      <div className={classes.home_products}>
+      <div className={classes.products}>
         <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd1} />
       </div>
     </div>

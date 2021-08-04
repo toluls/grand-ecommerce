@@ -7,10 +7,10 @@ const ProductCard = props => {
     <Link to={`/products/id/${props.id}`} className={classes.product}>
       <div className={classes.products}>
         <div className={classes.imageContainer}>
-        <img src={props.image} alt={props.name} className={classes.product__image}></img>
+        <img src={props.image} alt={props.name} className={classes.image}></img>
         </div>
-        <p className={classes.product__name}>{`${props.name.slice(0,18)} ...`}</p>
-        <p className={classes.product__price}>₦ {props.price}</p>
+        <p className={classes.name}>{`${props.name.slice(0,16)} ...`}</p>
+        <p className={classes.price}>₦ {props.price}</p>
       </div>
     </Link>
   );

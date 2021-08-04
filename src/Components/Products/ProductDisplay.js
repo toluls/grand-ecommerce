@@ -14,8 +14,8 @@ const ProductDisplay = props => {
 
   return (
     <div className={classes.products}>
-      <div className={classes.products__latest}>{props.heading || 'Latest Products'}</div>
-      <div className={classes.products__display}>
+      <div className={classes.latest}>{props.heading || 'Latest Products'}</div>
+      <div className={classes.display}>
       {/* load all products */}
       {
         productIsLoading ?
@@ -23,11 +23,11 @@ const ProductDisplay = props => {
         productsToDisplay
         }
       </div>
-      <div className={classes.products__advert}>
+      <div className={classes.advert}>
         <BannerDisplay image={props.adImage} />
       </div>
-      <div className={classes.products__recent}>People Recently Bought</div>
-      <div className={classes.products__suggests}>
+      <div className={classes.recent}>People Recently Bought</div>
+      <div className={classes.suggests}>
       {/* load some filtered products */}
       {
         productIsLoading ?

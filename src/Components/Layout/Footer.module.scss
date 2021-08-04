@@ -1,6 +1,7 @@
 @import '../../sass/mixins.scss';
 @import '../../sass/variables.scss';
 
+
 .footer {
   display: flex;
   flex-flow: column nowrap;
@@ -8,79 +9,83 @@
   color: $color-white;
   font-size: 1.5rem;
   width: 100%;
+}
 
-  &__top {
-    background-color: $brand-color-main;
-    padding: 1rem;
-    text-align: center;
-    border-top: 1rem solid rgba(250, 250, 250, .4);
+.footerTop {
+  background-color: $brand-color-main;
+  padding: 1rem;
+  text-align: center;
+  border-top: 1rem solid rgba(250, 250, 250, .4);
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($brand-color-main, .9);
+  }
+
+  & p {
     font-size: 1.5rem;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba($brand-color-main, .9);
-    }
-
-    & p {
-      font-size: 1.5rem;
-    }
   }
+}
 
-  &__body {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 0;
-  }
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
 
-  &__item {
-    padding: 1rem;
-  }
+.list {
+  list-style: none;
+}
 
-  &__link {
+.item {
+  padding: 1rem;
+
+  & a {
     text-decoration: none;
     color: $color-grey-dark;
-
+  
     &:hover {
       text-decoration: underline;
       color: $color-white;
     }
   }
+}
 
-  &__logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 1rem 2rem;
-    background-color: $color-grey-dark-2;
-    border-top: 3px solid rgba($color-grey-dark, .1);
-  }
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: $color-grey-dark-2;
+  border-top: 3px solid rgba($color-grey-dark, .1);
+}
 
-  &__logo {
-    width: 100%;
-  }
+.logo {
+  width: 100%;
+}
 
-  &__brand {
-    flex: 0 10rem;
-  }
+.brand {
+  flex: 0 10rem;
+}
 
-  &__payment {
-    flex: 0 25rem;
-    margin-left: 5rem;
-  }
+.payment {
+  flex: 0 25rem;
+  margin-left: 5rem;
+}
 
-  &__credit {
-    padding: 2rem;
-    text-align: center;
-    background-color: $color-grey-dark-2;
+.credit {
+  padding: 2rem;
+  text-align: center;
+  background-color: $color-grey-dark-2;
 
-    & a {
-      text-decoration: none;
-      color: $color-grey-dark;
+  & a {
+    text-decoration: none;
+    color: $color-grey-dark;
 
-      &:hover {
-        color: $color-white;
-      }
+    &:hover {
+      color: $color-white;
     }
   }
 }

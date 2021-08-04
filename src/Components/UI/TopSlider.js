@@ -8,13 +8,12 @@ import image3 from '../../assets/img/slider_3.jpg';
 
 
 const TopSlider = () => {
-
   return (
-    <div className={classes.topslider}>
+    <div className={classes.slider}>
       <AliceCarousel autoPlay autoPlayInterval="5000" autoPlayStrategy="action" disableButtonsControls infinite>
-        <img src={image1} className={classes.topslider__img} alt="slider 1" />
-        <img src={image2} className={classes.topslider__img} alt="slider 2" />
-        <img src={image3} className={classes.topslider__img} alt="slider 3" />
+        <img src={image1} className={classes.image} alt="slider 1" />
+        <img src={image2} className={classes.image} alt="slider 2" />
+        <img src={image3} className={classes.image} alt="slider 3" />
       </AliceCarousel>
     </div>
   );

@@ -17,25 +17,25 @@
   @include respond {
     font-size: 1.7rem;
   }
+}
 
-  &__item {
-    padding: .5rem 1rem;
-    cursor: pointer;
+.item {
+  padding: .5rem 1rem;
+  cursor: pointer;
 
-    &:nth-child(1) {
-      display: none;
+  &:nth-child(1) {
+    display: none;
 
-      @include respond {
-        display: block;
-      }
-    }
-
-    &:hover {
-      color: $brand-color-sub;
+    @include respond {
+      display: block;
     }
   }
 
-  &__icon {
-    padding-right: .6rem;
+  &:hover {
+    color: $brand-color-sub;
   }
+}
+
+.icon {
+  padding-right: .6rem;
 }

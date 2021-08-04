@@ -4,37 +4,37 @@
 .home {
   width: 100%;
   background-color: $color-grey;
+}
 
-  &__header {
-    @include respond($large-screen) {
-      padding: 2rem;
-      display: flex;
-    }
+.header {
+  @include respond($large-screen) {
+    padding: 2rem;
+    display: flex;
   }
+}
 
-  &__nav {
-    display: none;
+.nav {
+  display: none;
 
-    @include respond($large-screen) {
-      display: block;
-      background-color: $color-white;
-      border-radius: 1rem;
-      margin-right: 2rem;
-      flex: 0 25rem;
-    }
+  @include respond($large-screen) {
+    display: block;
+    background-color: $color-white;
+    border-radius: 1rem;
+    margin-right: 2rem;
+    flex: 0 25rem;
   }
+}
 
-  &__slider {
-    @include respond($large-screen) { 
-      width: 100%;
-      border-radius: 1rem;
-      overflow: hidden;
-      flex: 1;
-      background-color: $brand-color-main;
-    }
+.slider {
+  @include respond($large-screen) { 
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex: 1;
+    background-color: $brand-color-main;
   }
+}
 
-  &_products {
-    padding: 1rem 0;
-  }
+.products {
+  padding: 1rem 0;
 }
