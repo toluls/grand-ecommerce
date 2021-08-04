@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import BannerDisplay from '../UI/BannerDisplay';
 import LoadingSpinner from '../Products/LoadingSpinner';
 import ProductCard from '../Products/ProductCard';
-import displayImage from '../../assets/img/adImage_5.jpg';
 import classes from './ProductDetails.module.scss';
-import bannerImage from '../../assets/img/banner_1.jpg';
+import sideBannerImage from '../../assets/img/banner_1.jpg';
+
+const displayImage =  '/img/phones.jpg';
 
 const ProductDetails = () => {
   const params = useParams();
@@ -52,7 +53,7 @@ const ProductDetails = () => {
         }
         </div>
         <div className={classes.banner}>
-          <img src={bannerImage} alt="Grand display banner"/>
+          <img src={sideBannerImage} alt="Grand display banner"/>
         </div>
       </div>
 
