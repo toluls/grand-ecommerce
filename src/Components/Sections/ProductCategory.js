@@ -14,10 +14,10 @@ const ProductCategory = () => {
 
   const isLoading = useSelector(state => state.products.isLoading);
   const storeProducts = useSelector(state => state.products.products);
+  const productCategories = useSelector(state => state.products.categories);
   const products = storeProducts.filter(product => product.category.includes(urlCategory));
 
-  const appCategories = ['electronics', 'fashion', 'beauty', 'phones', 'computing'];
-  const isCategory = appCategories.includes(urlCategory)
+  const isCategory = productCategories.includes(urlCategory);
 
 
   if (isCategory) {

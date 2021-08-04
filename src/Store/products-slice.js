@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   products: [],
+  categories: ['electronics', 'fashion', 'beauty', 'phones', 'computing'],
   isLoading: true
 };
 
