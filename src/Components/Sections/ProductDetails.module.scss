@@ -13,7 +13,7 @@
 
 .content {
   background-color: $color-white;
-  padding: 2rem;
+  padding: 1rem;
   margin: 1.5rem;
   border-radius: 1rem;
   flex: 1;
@@ -26,6 +26,7 @@
 }
 
 .image {
+  width: 100%;
   border-radius: 1rem;
   padding: 1rem 2rem;
   flex: 1;
@@ -36,7 +37,7 @@
 }
 
 .description {
-  padding: 1rem;
+  padding: .5rem;
   padding-bottom: 3rem;
   flex: 1;
 }
@@ -78,7 +79,7 @@
 
 .action {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
   padding-bottom: 3rem;
   margin-bottom: 3rem;
@@ -88,8 +89,8 @@
 
 .input {
   @extend %button;
-  padding: 1rem;
-  flex: 0 7rem;
+  padding: .5rem;
+  flex: 0 1rem;
   border-radius: 1rem;
   border: 2px solid $brand-color-sub;
 }
@@ -97,14 +98,14 @@
 .button {
   @extend %button;
   padding: 1rem;
-  flex: 2;
+  flex: 1;
   margin-left: 1rem;
   background-color: $brand-color-sub;
   border-radius: 1rem;
 }
 
 .detailed_info {
-  padding: 1rem;
+  padding: .5rem;
 }
 
 .info_title {
