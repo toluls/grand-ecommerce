@@ -24,10 +24,10 @@ const App = () => {
       <Switch>
         <Route path="/" component={HomeSection} exact />
         <Route path="/products" component={ProductSection} exact />
-        <Route path="/products/:productCategory" component={ProductCategory} exact />
-        <Route path="/products/id/:productId" component={ProductDetails} exact />
-        <Route path="/customer-service" component={CustomerServiceSection} exact />
-        <Route path="/cart" component={CartSection} exact />
+        <Route path="/products/id/:productId" component={ProductDetails} />
+        <Route path="/products/:productCategory" component={ProductCategory} />
+        <Route path="/customer-service" component={CustomerServiceSection} />
+        <Route path="/cart" component={CartSection} />
         <Route path="*" component={NotFound} />
       </Switch>
     </AppLayout>
