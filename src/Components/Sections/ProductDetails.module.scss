@@ -28,7 +28,7 @@
 .image {
   width: 100%;
   border-radius: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   flex: 1;
 
   & img {
@@ -79,6 +79,7 @@
 
 .action {
   display: flex;
+  flex-direction: row wrap;
   justify-content: center;
   padding: 1rem;
   padding-bottom: 3rem;
@@ -87,10 +88,13 @@
 
 }
 
+.inputContainer {
+  flex: 0 7rem;
+}
+
 .input {
   @extend %button;
-  padding: .5rem;
-  flex: 0 7rem;
+  padding: .8rem .5rem;
   width: 7rem;
   border-radius: 1rem;
   border: 2px solid $brand-color-sub;
