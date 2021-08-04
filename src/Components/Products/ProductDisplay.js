@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './ProductDisplay.module.scss';
 import ProductCard from './ProductCard';
-import LoadingProducts from './LoadingProducts';
+import LoadingSpinner from './LoadingSpinner';
 import BannerDisplay from '../UI/BannerDisplay';
 
 const ProductDisplay = props => {
@@ -19,7 +19,7 @@ const ProductDisplay = props => {
       {/* load all products */}
       {
         productIsLoading ?
-        <LoadingProducts /> :
+        <LoadingSpinner /> :
         productsToDisplay
         }
       </div>
@@ -31,7 +31,7 @@ const ProductDisplay = props => {
       {/* load some filtered products */}
       {
         productIsLoading ?
-        <LoadingProducts /> :
+        <LoadingSpinner /> :
         suggestedProducts
         }
       </div>

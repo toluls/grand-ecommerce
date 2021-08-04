@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import BannerDisplay from '../UI/BannerDisplay';
-import LoadingProducts from '../Products/LoadingProducts';
+import LoadingSpinner from '../Products/LoadingSpinner';
 import ProductCard from '../Products/ProductCard';
 import displayImage from '../../assets/img/adImage_5.jpg';
 import classes from './ProductDetails.module.scss';
@@ -27,7 +27,7 @@ const ProductDetails = () => {
     <div className={classes.product}>
       <div className={classes.top_section}>
         <div className={classes.content}>
-        { isLoading ? <LoadingProducts /> : 
+        { isLoading ? <LoadingSpinner /> : 
           <Fragment>
           <div className={classes.image}>
             <img src={selectedProduct.image} alt={selectedProduct.title}></img>
