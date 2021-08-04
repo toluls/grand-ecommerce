@@ -5,13 +5,13 @@ import ProductDisplay from '../Products/ProductDisplay';
 import BannerDisplay from '../UI/BannerDisplay';
 import classes from './ProductCategory.module.scss';
 
-const displayImage =  '/img/electronics.jpg';
-
 const ProductCategory = () => {
   const params = useParams();
   const history = useHistory();
   const urlCategory = params.productCategory;
-  const image = `/img/${urlCategory}.jpg`;
+
+  const image = `/img/${urlCategory}1.jpg`;
+  const displayImage =  `/img/${urlCategory}2.jpg`;
 
   const isLoading = useSelector(state => state.products.isLoading);
   const storeProducts = useSelector(state => state.products.products);
