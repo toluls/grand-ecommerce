@@ -7,7 +7,7 @@
   padding: .5rem;
   cursor: pointer;
 
-  @include respond {
+  @include respond($mid) {
     display: none;
   }
 }

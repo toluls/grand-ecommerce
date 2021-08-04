@@ -5,7 +5,6 @@
 }
 
 .latest, .recent {
-  margin: 1rem 0;
   padding: 1rem;
   padding-left: 2rem;
   background-color: $brand-color-sub;
@@ -17,10 +16,17 @@
   color: $color-white;
 }
 
+.displayWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .display, .suggests {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
+  padding: 1rem 0;
 }
 
 .advert {

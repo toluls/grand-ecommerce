@@ -19,7 +19,7 @@
   flex: 1;
   @extend %boxShadow; 
 
-  @include respond {
+  @include respond($mid) {
     display: flex;
     justify-content: center;
   }
@@ -62,13 +62,13 @@
   display: none;
   @extend %boxShadow;
 
-  @include respond(1100px) {
+  @include respond($max) {
     display: flex;
     background-color: $color-white;
     padding: 1rem;
     margin: 1.5rem;
     border-radius: 1rem; 
-    flex: 0 20rem; 
+    flex: 0 25rem; 
   }
 
   & img {
@@ -112,17 +112,13 @@
   padding-bottom: 2rem;
 }
 
-.suggestion {
-  visibility: visible;
-}
-
 .viewed {
   background-color: $brand-color-sub;
-  padding: 2rem 1rem;
+  padding: 1rem;
   font-weight: 600;
 
   &_products {
-    padding: 2rem 1rem; 
+    padding: 1rem 0; 
     display: flex;  
     justify-content: center;
     flex-flow: row wrap;

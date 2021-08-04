@@ -1,6 +1,4 @@
-@import './variables.scss';
-
-@mixin respond($pixels: $mid-screen) {
+@mixin respond($pixels) {
   @media (min-width: $pixels) {
     @content;
   };

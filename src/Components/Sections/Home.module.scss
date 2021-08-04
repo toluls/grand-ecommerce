@@ -1,5 +1,5 @@
-@import '../../sass/mixins.scss';
 @import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
 
 .home {
   width: 100%;
@@ -7,7 +7,7 @@
 }
 
 .header {
-  @include respond($large-screen) {
+  @include respond($big) {
     padding: 2rem;
     display: flex;
   }
@@ -16,7 +16,7 @@
 .nav {
   display: none;
 
-  @include respond($large-screen) {
+  @include respond($big) {
     display: block;
     background-color: $color-white;
     border-radius: 1rem;
@@ -26,12 +26,12 @@
 }
 
 .slider {
-  @include respond($large-screen) { 
+  @include respond($big) { 
     width: 100%;
     border-radius: 1rem;
     overflow: hidden;
     flex: 1;
-    background-color: $brand-color-main;
+    background-color: $color-white;
   }
 }
 

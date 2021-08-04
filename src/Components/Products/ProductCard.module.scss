@@ -5,6 +5,7 @@
   flex: 0 15rem;
   margin: 1rem .5rem;
   padding: 1rem;
+  border-radius: .5rem;
   background-color: $color-white;
   overflow: hidden;
   text-align: center;
@@ -12,7 +13,7 @@
   text-decoration: none;
   color: $color-black;
 
-  @include respond {
+  @include respond($mid) {
     flex: 0 20rem;
     margin: 1rem;
   }

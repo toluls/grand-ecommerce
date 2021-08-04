@@ -15,25 +15,29 @@ const ProductDisplay = props => {
   return (
     <div className={classes.products}>
       <div className={classes.latest}>{props.heading || 'Latest Products'}</div>
-      <div className={classes.display}>
-      {/* load all products */}
-      {
-        productIsLoading ?
-        <LoadingSpinner /> :
-        productsToDisplay
-        }
+      <div className={classes.displayWrapper}>
+        <div className={classes.display}>
+        {/* load all products */}
+        {
+          productIsLoading ?
+          <LoadingSpinner /> :
+          productsToDisplay
+          }
+        </div>
       </div>
       <div className={classes.advert}>
         <BannerDisplay image={props.adImage} />
       </div>
       <div className={classes.recent}>People Recently Bought</div>
-      <div className={classes.suggests}>
-      {/* load some filtered products */}
-      {
-        productIsLoading ?
-        <LoadingSpinner /> :
-        suggestedProducts
-        }
+      <div className={classes.displayWrapper}>
+        <div className={classes.suggests}>
+        {/* load some filtered products */}
+        {
+          productIsLoading ?
+          <LoadingSpinner /> :
+          suggestedProducts
+          }
+        </div>
       </div>
     </div>
   );

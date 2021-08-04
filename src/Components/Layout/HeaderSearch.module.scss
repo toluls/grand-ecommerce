@@ -22,7 +22,7 @@
     border: 3px solid $color-white;
   }
 
-  @include respond {
+  @include respond($mid) {
     flex: 1;
   }
 }

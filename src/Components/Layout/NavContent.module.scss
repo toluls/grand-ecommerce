@@ -11,7 +11,7 @@
   &__item {
     padding: 1.3rem 0;
 
-    @include respond($large-screen) {
+    @include respond($big) {
       padding: .8rem 0;
     }
 
