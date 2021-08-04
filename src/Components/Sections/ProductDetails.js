@@ -38,7 +38,7 @@ const ProductDetails = () => {
               <p className={classes.price}>{`₦ ${selectedProduct.price}`}</p>
             </div>
             <div className={classes.action}>
-              <input type="number" step="1" min="1" max="10" className={classes.input} />
+              <input type="number" step="1" min="1" className={classes.input} />
               <button className={classes.button}>Add to Cart</button>
             </div>
             <div className={classes.detailed_info}>

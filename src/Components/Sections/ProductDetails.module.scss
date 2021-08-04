@@ -90,7 +90,8 @@
 .input {
   @extend %button;
   padding: .5rem;
-  flex: 0 1rem;
+  flex: 0 7rem;
+  width: 7rem;
   border-radius: 1rem;
   border: 2px solid $brand-color-sub;
 }
