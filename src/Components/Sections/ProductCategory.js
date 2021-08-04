@@ -3,7 +3,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProductDisplay from '../Products/ProductDisplay';
 import BannerDisplay from '../UI/BannerDisplay';
-import displayAd1 from '../../assets/img/adImage_1.jpg';
+import displayAd from '../../assets/img/adImage_2.jpg';
 import classes from './ProductCategory.module.scss';
 
 const ProductCategory = () => {
@@ -24,7 +24,7 @@ const ProductCategory = () => {
     return (
       <div className={classes.category}>
         <BannerDisplay image={image} />
-        <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd1} heading={urlCategory.toUpperCase()} />
+        <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd} heading={urlCategory.toUpperCase()} />
       </div>
     );
   }
