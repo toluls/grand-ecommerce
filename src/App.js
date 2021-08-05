@@ -5,6 +5,7 @@ import { loadProducts } from './Store/products-actions';
 import HomeSection from './Components/Sections/Home';
 import ProductSection from './Components/Sections/Products';
 import CustomerServiceSection from './Components/Sections/CustomerService';
+import CheckoutSection from './Components/Sections/Checkout';
 import NotFound from './Components/Sections/NotFound';
 import AppLayout from './Components/Layout/AppLayout';
 import CartSection from './Components/Sections/Cart';
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/products/:productCategory" component={ProductCategory} exact />
         <Route path="/customer-service" component={CustomerServiceSection} />
         <Route path="/cart" component={CartSection} />
+        <Route path="/checkout" component={CheckoutSection} />
         <Route path="*" component={NotFound} />
       </Switch>
     </AppLayout>
