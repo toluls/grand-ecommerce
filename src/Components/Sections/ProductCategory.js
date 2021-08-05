@@ -3,8 +3,9 @@ import { useParams, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProductDisplay from '../Products/ProductDisplay';
 import BannerDisplay from '../UI/BannerDisplay';
-import displayAd from '../../assets/img/adImage_2.jpg';
 import classes from './ProductCategory.module.scss';
+
+const displayImage =  '/img/electronics.jpg';
 
 const ProductCategory = () => {
   const params = useParams();
@@ -24,7 +25,7 @@ const ProductCategory = () => {
     return (
       <div className={classes.category}>
         <BannerDisplay image={image} />
-        <ProductDisplay isLoading={isLoading} products={products} adImage={displayAd} heading={urlCategory.toUpperCase()} />
+        <ProductDisplay isLoading={isLoading} products={products} adImage={displayImage} heading={urlCategory.toUpperCase()} />
       </div>
     );
   }
