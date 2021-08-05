@@ -5,6 +5,7 @@
 .product {
   width: 100%;
   background-color: $color-grey;
+  padding-bottom: 3rem;
 }
 
 .top_section {
@@ -125,15 +126,19 @@
   background-color: $brand-color-sub;
   padding: 1rem;
   font-weight: 600;
+}
 
-  &_products {
-    padding: 1rem 0; 
-    display: flex;  
-    justify-content: center;
-    flex-flow: row wrap;
+.productsViewed {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
+  gap: .7rem;
+  padding: 1rem;
+
+  @include respond($mid) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+    padding: 2rem 1rem;
   }
 }
-  
 
 
 

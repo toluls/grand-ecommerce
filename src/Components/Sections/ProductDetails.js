@@ -63,7 +63,7 @@ const ProductDetails = () => {
         <div className={classes.viewed}>
         Customers also viewed
         </div>
-        <div className={classes.viewed_products}>
+        <div className={classes.productsViewed}>
           {alsoViewedProducts}
         </div>
       </div>

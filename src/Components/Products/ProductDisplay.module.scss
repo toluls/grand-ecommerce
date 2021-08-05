@@ -1,7 +1,9 @@
 @import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
 
 .products {
   width: 100%;
+  padding-bottom: 3rem;
 }
 
 .latest, .recent {
@@ -16,17 +18,16 @@
   color: $color-white;
 }
 
-.displayWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .display, .suggests {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
+  gap: .7rem;
+  padding: 1rem;
+
+  @include respond($mid) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+    padding: 2rem 1rem;
+  }
 }
 
 .advert {
