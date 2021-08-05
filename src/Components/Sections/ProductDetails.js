@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import BannerDisplay from '../UI/BannerDisplay';
 import LoadingSpinner from '../Products/LoadingSpinner';
@@ -52,9 +52,9 @@ const ProductDetails = () => {
           </Fragment>
         }
         </div>
-        <div className={classes.banner}>
+        <Link to="/" className={classes.banner}>
           <img src={sideBannerImage} alt="Grand display banner"/>
-        </div>
+        </Link>
       </div>
 
       <BannerDisplay image={displayImage} />
@@ -63,7 +63,7 @@ const ProductDetails = () => {
         <div className={classes.viewed}>
         Customers also viewed
         </div>
-        <div className={classes.viewed_products}>
+        <div className={classes.productsViewed}>
           {alsoViewedProducts}
         </div>
       </div>
