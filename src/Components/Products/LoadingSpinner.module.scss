@@ -1,9 +1,14 @@
 @import '../../sass/variables.scss';
 
+.loader {
+  width: 100%;
+  padding: 2rem;
+}
+
 .loading {
-  margin: 2rem auto;
-  width: 8rem;
-  height: 8rem;
+  margin: auto;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   background-color: $color-grey-light;
   border: 1rem solid $brand-color-sub;
