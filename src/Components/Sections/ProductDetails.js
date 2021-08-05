@@ -7,7 +7,7 @@ import ProductCard from '../Products/ProductCard';
 import classes from './ProductDetails.module.scss';
 import sideBannerImage from '../../assets/img/banner_1.jpg';
 
-const displayImage =  '/img/phones.jpg';
+const displayImage =  '/img/details.jpg';
 
 const ProductDetails = () => {
   const params = useParams();
