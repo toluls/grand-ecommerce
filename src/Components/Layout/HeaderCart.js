@@ -5,17 +5,17 @@ import classes from './HeaderCart.module.scss';
 import { CartIcon } from '../UI/Icons';
 
 const HeaderCart = () => {
-  const [cartIsTouched, setCartIsTouched] = useState(false);
+  const [cartTouched, setCartTouched] = useState(false);
   const cartQuantity = useSelector(state => state.cart.items.length);
 
   useEffect(() => {
     if (cartQuantity === 0) {
       return;
     }
-    setCartIsTouched(true);
+    setCartTouched(true);
 
     const timer = setTimeout(() => {
-      setCartIsTouched(false);
+      setCartTouched(false);
     }, 400);
 
     return () => {
@@ -25,7 +25,7 @@ const HeaderCart = () => {
   }, [cartQuantity]);
 
   return (
-      <Link to="/cart" className={`${classes.cart} ${cartIsTouched && classes.cart__touched}`}>
+      <Link to="/cart" className={`${classes.cart} ${cartTouched && classes.cart__touched}`}>
         <span className={classes.cart__icon}><CartIcon /></span>
         <span className={classes.cart__text}>{cartQuantity}</span>
       </Link>

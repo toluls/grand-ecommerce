@@ -1,0 +1,65 @@
+@import '../../sass/variables.scss';
+@import '../../sass/mixins.scss';
+@import '../../sass/placeholders.scss';
+
+.display {
+  width: 100%;
+  background-color: $color-grey;
+  padding-bottom: 3rem;
+}
+
+
+.top_section {
+  display: flex;
+}
+
+.content {
+  background-color: $color-white;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  flex: 1;
+  @extend %boxShadow; 
+
+  @include respond($mid) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.banner {
+  display: none;
+  @extend %boxShadow;
+
+  @include respond($max) {
+    display: block;
+    background-color: $color-white;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 1rem; 
+    flex: 0 25rem; 
+    cursor: pointer;
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+.heading {
+  background-color: $brand-color-sub;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.showProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
+  gap: .7rem;
+  padding: 1rem;
+
+  @include respond($mid) {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+    padding: 2rem 1rem;
+  }
+}

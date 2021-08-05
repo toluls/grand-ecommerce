@@ -20,8 +20,8 @@ const Footer = () => {
       <div className={classes.body}>
         <ul className={classes.list}>
           <li className={classes.item}><Link to="/">Home</Link></li>
-          <li className={classes.item}><Link to="/products">Products</Link></li>
           <li className={classes.item}><Link to="/products">Today's Deals</Link></li>
+          <li className={classes.item}><Link to="/cart">My Cart</Link></li>
           <li className={classes.item}><Link to="/customer-service">Customer Service</Link></li>
         </ul>
         <ul className={classes.list}>

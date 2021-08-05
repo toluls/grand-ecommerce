@@ -1,8 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  items: '11111111111',
-  totalQuantity: 0
+  items: [],
+  totalQuantity: 0,
+  cartIsTouched: false
 }
 
 const cartSlice = createSlice({
@@ -18,6 +19,9 @@ const cartSlice = createSlice({
     },
     clearCart() {
       //
+    },
+    setCartIsTouched(state, action) {
+      state.cartIsTouched = action.payload;
     }
   }
 });

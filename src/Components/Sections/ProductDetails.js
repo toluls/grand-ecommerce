@@ -1,11 +1,12 @@
 import React, { Fragment } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import BannerDisplay from '../UI/BannerDisplay';
+import { useParams } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { cartActions } from '../../Store/cart-slice';
 import LoadingSpinner from '../Products/LoadingSpinner';
 import ProductCard from '../Products/ProductCard';
+import SectionDisplay from '../Layout/SectionDisplay';
+import CallToAction from '../UI/CallToAction';
 import classes from './ProductDetails.module.scss';
-import sideBannerImage from '../../assets/img/banner_1.jpg';
 
 const displayImage =  '/img/details.jpg';
 
@@ -14,60 +15,64 @@ const ProductDetails = () => {
   const urlProductId = parseInt(params.productId);
   const isLoading = useSelector(state => state.products.isLoading);
   const storeProducts = useSelector(state => state.products.products);
+  const cartIsTouched = useSelector(state => state.cart.cartIsTouched);
+  const dispatch = useDispatch();
 
   const selectedProduct = storeProducts.find(product => product.id === urlProductId); 
   
   const getOtherProducts = () => {
     const otherProducts = storeProducts.filter(product => product.category === selectedProduct.category && product.id !== selectedProduct.id);
     return otherProducts.map(product => <ProductCard key={product.id} id={product.id} image={product.image} name={product.title} price={product.price} />);
-  } 
+  };
 
-  const alsoViewedProducts = getOtherProducts();
+  const handleAddToCart = () => {
+    dispatch(cartActions.addToCart());
+    if (!cartIsTouched) {
+      dispatch(cartActions.setCartIsTouched(true));
+    }
+  }
+
+  const displayProducts = getOtherProducts();
+
+  const content = (
+    <div className={classes.contentWrapper}>
+    <div className={classes.content}>
+      { isLoading && <LoadingSpinner />}
+      { !isLoading && 
+      <Fragment>
+      <div className={classes.image}>
+        <img src={selectedProduct.image} alt={selectedProduct.title}></img>
+      </div>
+      <div className={classes.description}>
+          <Fragment>
+          <h1 className={classes.title}>{selectedProduct.title}</h1>
+          <p className={classes.price}>{`₦ ${selectedProduct.price}`}</p>
+          </Fragment>
+        <div className={classes.action}>
+          <div className={classes.inputContainer}>
+            <input type="number" step="1" min="1" className={classes.input} />
+          </div>
+          <button className={classes.button} onClick={handleAddToCart}>Add to Cart</button>
+        </div>
+        <CallToAction />
+        
+      </div>
+      </Fragment>
+      }
+    </div>
+      <div className={classes.infoContainer}>
+        <p className={classes.infoTitle}>PRODUCT DETAILS</p>
+        <p className={classes.infoBody}>{selectedProduct.description}</p>
+      </div>
+      </div>
+    );
  
   return (
-    <div className={classes.product}>
-      <div className={classes.top_section}>
-        <div className={classes.content}>
-        { isLoading ? <LoadingSpinner /> : 
-          <Fragment>
-          <div className={classes.image}>
-            <img src={selectedProduct.image} alt={selectedProduct.title}></img>
-          </div>
-          <div className={classes.description}>
-            <div className={classes.details}>
-              <h1 className={classes.title}>{selectedProduct.title}</h1>
-              <p className={classes.price}>{`₦ ${selectedProduct.price}`}</p>
-            </div>
-            <div className={classes.action}>
-              <div className={classes.inputContainer}>
-                <input type="number" step="1" min="1" className={classes.input} />
-              </div>
-              <button className={classes.button}>Add to Cart</button>
-            </div>
-            <div className={classes.detailed_info}>
-              <p className={classes.info_title}>PRODUCT DETAILS</p>
-              <p>{selectedProduct.description}</p>
-            </div>
-          </div>
-          </Fragment>
-        }
-        </div>
-        <Link to="/" className={classes.banner}>
-          <img src={sideBannerImage} alt="Grand display banner"/>
-        </Link>
-      </div>
-
-      <BannerDisplay image={displayImage} />
-
-      <div className={classes.suggestion}>
-        <div className={classes.viewed}>
-        Customers also viewed
-        </div>
-        <div className={classes.productsViewed}>
-          {alsoViewedProducts}
-        </div>
-      </div>
-    </div>
+    <SectionDisplay
+    contentToDisplay={content}
+    displayImage={displayImage}
+    bottomHeading={"Customers also viewed"}
+    productsToShow={displayProducts} />
   );
 }
 

@@ -2,23 +2,14 @@
 @import '../../sass/mixins.scss';
 @import '../../sass/placeholders.scss';
 
-.product {
+.contentWrapper {
   width: 100%;
-  background-color: $color-grey;
-  padding-bottom: 3rem;
-}
-
-.top_section {
-  display: flex;
 }
 
 .content {
-  background-color: $color-white;
+  width: 100%;
   padding: 1rem;
-  margin: 1.5rem;
-  border-radius: 1rem;
   flex: 1;
-  @extend %boxShadow; 
 
   @include respond($mid) {
     display: flex;
@@ -27,25 +18,23 @@
 }
 
 .image {
-  width: 100%;
   border-radius: 1rem;
-  background: url('../../assets/img/product-placeholder.png') no-repeat center/cover;
   padding: 1rem;
-  flex: 1;
+  flex: 0 40rem;
+  max-height: 40rem;
+  margin-bottom: 1rem;
 
   & img {
     width: 100%;
+    max-height: 40rem;
+    object-fit: contain;
   }
 }
 
 .description {
   padding: .5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   flex: 1;
-}
-
-.details {
-  visibility: visible;
 }
 
 .title {
@@ -61,32 +50,13 @@
   padding: 1rem;
 }
 
-.banner {
-  display: none;
-  @extend %boxShadow;
-
-  @include respond($max) {
-    display: block;
-    background-color: $color-white;
-    padding: 1rem;
-    margin: 1.5rem;
-    border-radius: 1rem; 
-    flex: 0 25rem; 
-    cursor: pointer;
-  }
-
-  & img {
-    width: 100%;
-  }
-}
-
 .action {
   display: flex;
   flex-direction: row wrap;
   justify-content: center;
   padding: 1rem;
   padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid $color-grey;
 
 }
@@ -113,31 +83,19 @@
   @extend %boxShadow
 }
 
-.detailed_info {
-  padding: .5rem;
+.infoContainer {
+  padding: 2rem 2rem 15rem;
+  border-top: 2px solid $color-grey;
+  margin-top: 2rem;
 }
 
-.info_title {
+.infoTitle {
   font-weight: 600;
-  padding-bottom: 2rem;
+  padding: 1rem;
 }
 
-.viewed {
-  background-color: $brand-color-sub;
+.infoBody {
   padding: 1rem;
-  font-weight: 600;
-}
-
-.productsViewed {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, auto));
-  gap: .7rem;
-  padding: 1rem;
-
-  @include respond($mid) {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
-    padding: 2rem 1rem;
-  }
 }
 
 

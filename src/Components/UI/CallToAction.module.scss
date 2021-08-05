@@ -1,0 +1,38 @@
+@import "../../sass/variables.scss";
+@import "../../sass/mixins.scss";
+@import '../../sass/placeholders.scss';
+
+.action {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  padding: 1rem;
+
+  @include respond($big) {
+    flex-flow: row;
+    justify-content: center;
+  }
+}
+
+%allAction {
+  padding: 1rem;
+  margin: .5rem;
+  border-radius: 1rem;
+  flex: 1;
+  color: $color-white;
+  text-align: center;
+  cursor: pointer;
+  @extend %boxShadow;
+}
+
+.back {
+  @extend %allAction;
+  background-color: $color-black;
+}
+
+.checkout {
+  @extend %allAction;
+  background-color: $brand-color-sub;
+  color: $color-black;
+  font-weight: 600;
+}
