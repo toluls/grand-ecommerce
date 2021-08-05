@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import classes from './CallToAction.module.scss';
 
-const CallToAction = () => {
+const CallToAction = props => {
   const cartIsTouched = useSelector(state => state.cart.cartIsTouched);
   const history = useHistory();
 
@@ -11,14 +11,14 @@ const CallToAction = () => {
     history.push('/products');
   }
 
-  const checkoutHandler = () => {
-    history.push('/checkout');
+  const pathHandler = () => {
+    history.push(`/${props.path}`);
   }
 
   const display = (
-    <div className={classes.action}>
+    <div className={classes.path}>
       <div onClick={continueHandler} className={classes.back}>Continue Shopping</div>
-      <div onClick={checkoutHandler} className={classes.checkout}>Proceed To Checkout</div>
+      <div onClick={pathHandler} className={classes.checkout}>{props.text}</div>
     </div>
   );
 
