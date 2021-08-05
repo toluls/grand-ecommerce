@@ -18,8 +18,8 @@ const SectionDisplay = props => {
 
       <BannerDisplay image={props.displayImage} />
 
-      <div className={classes.suggestion}>
-        <div className={classes.viewed}>{props.bottomHeading}</div>
+      <div>
+        <div className={classes.heading}>{props.bottomHeading}</div>
         <div className={classes.showProducts}>{props.productsToShow}</div>
       </div>
     </div>

@@ -15,7 +15,6 @@
 
 .content {
   background-color: $color-white;
-  padding: 1rem;
   margin: 1.5rem;
   border-radius: 1rem;
   flex: 1;
@@ -47,7 +46,7 @@
   }
 }
 
-.viewed {
+.heading {
   background-color: $brand-color-sub;
   padding: 1rem;
   font-weight: 600;
@@ -64,87 +63,3 @@
     padding: 2rem 1rem;
   }
 }
-
-
-// ==============
-.image {
-  width: 100%;
-  border-radius: 1rem;
-  background: url('../../assets/img/product-placeholder.png') no-repeat center/cover;
-  padding: 1rem;
-  flex: 1;
-
-  & img {
-    width: 100%;
-  }
-}
-
-.description {
-  padding: .5rem;
-  padding-bottom: 3rem;
-  flex: 1;
-}
-
-.details {
-  visibility: visible;
-}
-
-.title {
-  font-size: 2rem;
-  font-weight: 400;
-  border-bottom: 2px solid $color-grey;
-  padding: 1rem;
-}
-
-.price {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1rem;
-}
-
-
-.action {
-  display: flex;
-  flex-direction: row wrap;
-  justify-content: center;
-  padding: 1rem;
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
-  border-bottom: 2px solid $color-grey;
-
-}
-
-.inputContainer {
-  flex: 0 7rem;
-}
-
-.input {
-  @extend %button;
-  padding: .8rem .5rem;
-  width: 7rem;
-  border-radius: 1rem;
-  border: 2px solid $brand-color-sub;
-}
-
-.button {
-  @extend %button;
-  padding: 1rem;
-  flex: 1;
-  margin-left: 1rem;
-  background-color: $brand-color-sub;
-  border-radius: 1rem;
-  @extend %boxShadow
-}
-
-.detailed_info {
-  padding: .5rem;
-}
-
-.info_title {
-  font-weight: 600;
-  padding-bottom: 2rem;
-}
-
-
-
-
