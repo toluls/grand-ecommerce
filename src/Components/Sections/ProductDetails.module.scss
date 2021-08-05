@@ -108,6 +108,7 @@
   margin-left: 1rem;
   background-color: $brand-color-sub;
   border-radius: 1rem;
+  @extend %boxShadow
 }
 
 .detailed_info {
