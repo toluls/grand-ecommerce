@@ -36,7 +36,7 @@ const CartSection = () => {
 
   const handleDeleteClick = (id) => {
     dispatch(cartActions.deleteFromCart({ id }));
-    cartNotification('The selected item has been deleted from your cart');
+    cartNotification('The selected item has been removed from your cart');
   };
 
   const handleClearCart = () => {
