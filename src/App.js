@@ -8,7 +8,7 @@ import CustomerServiceSection from './Components/Sections/CustomerService';
 import CheckoutSection from './Components/Sections/Checkout';
 import NotFound from './Components/Sections/NotFound';
 import AppLayout from './Components/Layout/AppLayout';
-import CartSection from './Components/Sections/Cart';
+import CartSection from './Components/Cart/Cart';
 import ProductCategory from './Components/Sections/ProductCategory';
 import ProductDetails from './Components/Sections/ProductDetails';
 import './App.scss';
@@ -27,9 +27,9 @@ const App = () => {
         <Route path="/products" component={ProductSection} exact />
         <Route path="/products/id/:productId" component={ProductDetails} />
         <Route path="/products/:productCategory" component={ProductCategory} exact />
-        <Route path="/customer-service" component={CustomerServiceSection} />
         <Route path="/cart" component={CartSection} />
         <Route path="/checkout" component={CheckoutSection} />
+        <Route path="/(customer-service|contact|privacy|returns|delivery)/" component={CustomerServiceSection} />
         <Route path="*" component={NotFound} />
       </Switch>
     </AppLayout>
