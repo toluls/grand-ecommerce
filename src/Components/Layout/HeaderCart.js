@@ -6,7 +6,7 @@ import { CartIcon } from '../UI/Icons';
 
 const HeaderCart = () => {
   const [cartTouched, setCartTouched] = useState(false);
-  const cartQuantity = useSelector(state => state.cart.items.length);
+  const cartQuantity = useSelector(state => state.cart.totalQuantity);
 
   useEffect(() => {
     if (cartQuantity === 0) {
@@ -25,9 +25,9 @@ const HeaderCart = () => {
   }, [cartQuantity]);
 
   return (
-      <Link to="/cart" className={`${classes.cart} ${cartTouched && classes.cart__touched}`}>
-        <span className={classes.cart__icon}><CartIcon /></span>
-        <span className={classes.cart__text}>{cartQuantity}</span>
+      <Link to="/cart" className={`${classes.cart} ${cartTouched && classes.touched}`}>
+        <span className={classes.icon}><CartIcon /></span>
+        <span className={classes.text}>{cartQuantity}</span>
       </Link>
   )
 }

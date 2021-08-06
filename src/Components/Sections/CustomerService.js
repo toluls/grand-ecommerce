@@ -21,15 +21,15 @@ const CustomerServiceSection = () => {
       </div>
       <div id="privacy" className={classes.section}>
         <h1>Privacy Policy</h1>
-        <p></p>
+        <p>Bussiness privacy policy here</p>
       </div>
       <div id="returns" className={classes.section}>
         <h1>Returns</h1>
-        <p></p>
+        <p>Information on returns here</p>
       </div>
       <div id="delivery" className={classes.section}>
         <h1>Delivery</h1>
-        <p></p>
+        <p>Details about delivery should be here</p>
       </div>
     </div>
   );

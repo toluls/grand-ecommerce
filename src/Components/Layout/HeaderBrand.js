@@ -7,7 +7,7 @@ const HeaderBrand = () => {
   return (
     <div className={classes.brand}>
       <Link to="/">
-        <img src={logo} className={classes.brand__img} alt="Grand Fashion logo"/>
+        <img src={logo} className={classes.img} alt="Grand Fashion logo"/>
       </Link>
     </div>
   );

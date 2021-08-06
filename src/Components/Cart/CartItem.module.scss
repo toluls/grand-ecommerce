@@ -1,0 +1,101 @@
+@import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid $color-grey;
+  @extend %boxShadow;
+  margin-bottom: 1rem;
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: $brand-color-main;
+    }
+  }
+}
+
+.above {
+  display: flex;;
+  width: 100%;
+  
+}
+
+.below {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .8rem;
+  margin-top: 1rem;
+  border-top: 2px solid $color-grey;
+
+}
+
+.imageContainer {
+  flex: 0 8rem;
+  width: 8rem;
+  height: 10rem;
+  padding: .5rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.price {
+  color: $brand-color-main;
+  margin-top: .5rem;
+}
+
+.remove {
+  color: $brand-color-main;
+  width: 8rem;
+  align-self: flex-start;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border: 1px solid $brand-color-main;
+  margin-top: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    color: $color-white;
+    background-color: $brand-color-main;
+  }
+}
+
+.subtotal {
+  align-self: flex-end;
+  padding: .3rem 1rem;
+}
+
+.details {
+  flex: 1;
+  padding: .5rem;
+}
+
+.quantityContainer {
+  display: flex;
+}
+
+.actionGroup {
+  display: flex;
+}
+
+.action {
+  padding: .3rem 1rem;
+  background-color: $brand-color-sub;
+  color: $color-black;
+  cursor: pointer;
+}
+
+.quantity {
+  border: 1px solid $brand-color-sub;
+  padding: .3rem 1rem;
+}

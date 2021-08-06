@@ -44,6 +44,11 @@
   padding: 1rem;
 }
 
+.detailsBelow {
+  padding: 1rem;
+  color: $brand-color-main;
+}
+
 .price {
   font-size: 2rem;
   font-weight: 600;
@@ -58,7 +63,6 @@
   padding-bottom: 3rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid $color-grey;
-
 }
 
 .inputContainer {
@@ -71,16 +75,26 @@
   width: 7rem;
   border-radius: 1rem;
   border: 2px solid $brand-color-sub;
+  transition: all .3s ease;
+
+  &:hover {
+    border-color: $color-black;
+    }
 }
 
 .button {
   @extend %button;
+  @extend %boxShadow;
   padding: 1rem;
   flex: 1;
   margin-left: 1rem;
   background-color: $brand-color-sub;
   border-radius: 1rem;
-  @extend %boxShadow
+  transition: all .3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .infoContainer {

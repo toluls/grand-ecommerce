@@ -1,9 +1,9 @@
-import React from 'react';
-import classes from './Header.module.scss';
-import HeaderBrand from './HeaderBrand';
-import HeaderSearch from './HeaderSearch';
-import HeaderCart from './HeaderCart';
-import MobileMenuOpen from '../UI/MobileMenuOpen';
+import React from "react";
+import classes from "./Header.module.scss";
+import HeaderBrand from "./HeaderBrand";
+import HeaderSearch from "./HeaderSearch";
+import HeaderCart from "./HeaderCart";
+import MobileMenuOpen from "../UI/MobileMenuOpen";
 
 const Header = () => {
   return (
@@ -17,7 +17,7 @@ const Header = () => {
         <HeaderCart />
       </div>
     </header>
-  )
-}
+  );
+};
 
 export default Header;
