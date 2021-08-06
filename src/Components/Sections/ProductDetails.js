@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../Store/cart-slice";
@@ -17,6 +17,7 @@ const ProductDetails = () => {
   const isLoading = useSelector((state) => state.products.isLoading);
   const storeProducts = useSelector((state) => state.products.products);
   const cartIsTouched = useSelector((state) => state.cart.cartIsTouched);
+  const quantityRef = useRef();
   const dispatch = useDispatch();
 
   const selectedProduct = storeProducts.find(
@@ -60,6 +61,7 @@ const ProductDetails = () => {
 
     dispatch(cartActions.addToCart(cartItem));
     setItemQuantity(1);
+    quantityRef.current.value = 1;
 
     if (!cartIsTouched) {
       dispatch(cartActions.setCartIsTouched(true));
@@ -94,7 +96,7 @@ const ProductDetails = () => {
                     type="number"
                     step="1"
                     min="1"
-                    value={itemQuantity}
+                    ref={quantityRef}
                     onChange={quantityHandler}
                     className={classes.input}
                   />
