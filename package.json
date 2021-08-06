@@ -1,5 +1,6 @@
 {
   "name": "grand-ecommerce",
+  "developed-by": "Tolulope Saliu - toluls.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

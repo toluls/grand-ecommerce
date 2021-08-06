@@ -1,0 +1,24 @@
+@import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
+
+.empty {
+  padding: 1rem;
+}
+
+.shop {
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 2rem 0 5rem;
+  background-color: $brand-color-sub;
+  border-radius: 1rem;
+  color: $color-black;
+  font-weight: 600;
+  @extend %boxShadow;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}

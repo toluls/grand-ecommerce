@@ -15,13 +15,13 @@ const MainNav = () => {
 
   return (
     <div className={classes.nav}>
-      <div className={classes.nav__backdrop} onClick={closeMenuHandler}></div>
-      <div className={classes.nav__content}>
-        <div className={classes.nav__header}>
-        <div className={classes.nav__logo}>
-          <img src={brandLogo} className={classes.nav__img} alt="Grand Fashion logo" />
+      <div className={classes.backdrop} onClick={closeMenuHandler}></div>
+      <div className={classes.content}>
+        <div className={classes.header}>
+        <div className={classes.logo}>
+          <img src={brandLogo} className={classes.img} alt="Grand Fashion logo" />
         </div>
-        <div className={classes.nav__button} onClick={closeMenuHandler}>
+        <div className={classes.button} onClick={closeMenuHandler}>
           <MenuCloseIcon />
         </div>
         </div>

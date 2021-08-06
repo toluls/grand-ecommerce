@@ -14,9 +14,9 @@ const NavContent = () => {
 
   const NavItem = props => {
     return (
-      <li className={classes.nav__item}>
+      <li className={classes.item}>
         <Link to={props.to} onClick={closeMenuHandler}>
-          <span className={classes.nav__icon}>{props.icon}</span>          
+          <span className={classes.icon}>{props.icon}</span>          
           {props.text}
         </Link>
       </li>

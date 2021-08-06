@@ -1,0 +1,36 @@
+@import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
+
+.content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 6rem;
+
+  & h1 {
+    color: $brand-color-main;
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-bottom: 2px solid $color-grey;
+  }
+
+  & p {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  & a {
+    color: $brand-color-main;
+  }
+
+}
+
+.section {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid $color-grey;
+  @extend %boxShadow;
+}

@@ -25,10 +25,10 @@ const Footer = () => {
           <li className={classes.item}><Link to="/customer-service">Customer Service</Link></li>
         </ul>
         <ul className={classes.list}>
-          <li className={classes.item}><Link to="/customer-service/#contact">Contact Us</Link></li>
-          <li className={classes.item}><Link to="/customer-service/#privacy">Privacy Policy</Link></li>
-          <li className={classes.item}><Link to="/customer-service/#returns">Returns</Link></li>
-          <li className={classes.item}><Link to="/customer-service/#delivery">Delivery</Link></li>
+          <li className={classes.item}><Link to="/contact">Contact Us</Link></li>
+          <li className={classes.item}><Link to="/privacy">Privacy Policy</Link></li>
+          <li className={classes.item}><Link to="/returns">Returns</Link></li>
+          <li className={classes.item}><Link to="/delivery">Delivery</Link></li>
         </ul>
       </div>
 

@@ -16,13 +16,13 @@
   &:hover {
     color: $color-black;
   }
+}
 
-  &__text {
-    font-weight: 600;
-    margin-left: 1rem;
-  }
+.text {
+  font-weight: 600;
+  margin-left: 1rem;
+}
 
-  &__touched {
-    color: $color-black;
-  }
+.touched {
+  color: $color-black;
 }
