@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../Store/cart-slice";
+import { uiActions } from '../../Store/ui-slice';
 import LoadingSpinner from "../Products/LoadingSpinner";
 import ProductCard from "../Products/ProductCard";
 import SectionDisplay from "../Layout/SectionDisplay";
@@ -18,6 +19,7 @@ const ProductDetails = () => {
   const storeProducts = useSelector((state) => state.products.products);
   const cartIsTouched = useSelector((state) => state.cart.cartIsTouched);
   const dispatch = useDispatch();
+  const quantityRef = useRef();
 
   const selectedProduct = storeProducts.find(
     (product) => product.id === urlProductId
@@ -60,6 +62,13 @@ const ProductDetails = () => {
 
     dispatch(cartActions.addToCart(cartItem));
     setItemQuantity(1);
+    quantityRef.current.value = 1;
+
+    const message = `${itemQuantity} new ${itemQuantity === 1 ? 'item' : 'items'} added to your cart!`;
+    dispatch(uiActions.postNotification({
+      title: 'Cart Updated',
+      message 
+    }));
 
     if (!cartIsTouched) {
       dispatch(cartActions.setCartIsTouched(true));
@@ -94,7 +103,7 @@ const ProductDetails = () => {
                     type="number"
                     step="1"
                     min="1"
-                    value={itemQuantity}
+                    ref={quantityRef}
                     onChange={quantityHandler}
                     className={classes.input}
                   />

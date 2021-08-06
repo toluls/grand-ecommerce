@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import TopNav from './TopNav';
 import MainNav from './MainNav';
+import Notification from '../UI/Notification';
 import classes from './AppLayout.module.scss';
 
 const AppLayout = props => {
@@ -13,6 +14,7 @@ const AppLayout = props => {
     <div className={classes.container}>
       <Header />
       {navOpen && <MainNav />}
+      <Notification />
       <TopNav />
       <main>{props.children}</main>
       <Footer />

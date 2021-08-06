@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../Store/cart-slice";
+import { uiActions } from '../../Store/ui-slice';
 import ProductCard from "../Products/ProductCard";
 import SectionDisplay from "../Layout/SectionDisplay";
 import CallToAction from "../UI/CallToAction";
@@ -19,20 +20,28 @@ const CartSection = () => {
   const products = useSelector((state) => state.products.products);
   const activeCart = cartQuantity > 0;
 
+  const cartNotification = message => {
+    dispatch(uiActions.postNotification({ title: 'Cart Updated', message }));
+  }
+
   const handleReduceClick = (id) => {
     dispatch(cartActions.removeFromCart({ id }));
+    cartNotification('The item quantity has been reduced');
   };
 
   const handleIncreaseClick = (id, price) => {
     dispatch(cartActions.addToCart({ id, price, currentQuantity: 1 }));
+    cartNotification('The item quantity has been increased');
   };
 
   const handleDeleteClick = (id) => {
     dispatch(cartActions.deleteFromCart({ id }));
+    cartNotification('The selected item has been deleted from your cart');
   };
 
   const handleClearCart = () => {
     dispatch(cartActions.clearCart());
+    cartNotification('Your cart has been cleared! Kindly visit our products section to shop again.');
     backToTop();
   };
 

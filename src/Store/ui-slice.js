@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  navOpen: false
+  navOpen: false,
+  notification: false
 }
 
 const uiSlice = createSlice({
@@ -10,6 +11,9 @@ const uiSlice = createSlice({
   reducers: {
     openNav(state, action) {
       state.navOpen = action.payload;
+    },
+    postNotification(state, action) {
+      state.notification = action.payload;
     }
   }
 });
