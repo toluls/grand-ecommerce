@@ -1,0 +1,11 @@
+@import "../../sass/variables.scss";
+
+.notification {
+  width: 100%;
+  background-color: $brand-color-sub;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 110;
+}
