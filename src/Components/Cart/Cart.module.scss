@@ -47,7 +47,7 @@
   align-items: center;
   width: 100%;
   background-color: $brand-color-sub;
-  border-top: .5rem solid $brand-color-main;
+  // border-top: .5rem solid $brand-color-main;
   @extend %boxShadow;
   margin-bottom: 2rem;
   padding: .5rem;
@@ -55,8 +55,8 @@
 
 .clear {
   @extend %button;
-  background-color: $color-black;
-  color: $color-white;
+  background-color: $color-white ;
+  color: $color-grey-dark;
   padding: 1rem 2rem;
   margin: .5rem;
   border-radius: 1rem;
