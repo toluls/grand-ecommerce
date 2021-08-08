@@ -7,8 +7,8 @@ import SectionDisplay from "../Layout/SectionDisplay";
 import CallToAction from "../UI/CallToAction";
 import CartItem from "./CartItem";
 import { backToTop } from "../../utils/utils";
-import classes from "./Cart.module.scss";
 import CartEmpty from "./CartEmpty";
+import classes from "./Cart.module.scss";
 
 const displayImage = "/img/cart.jpg";
 
