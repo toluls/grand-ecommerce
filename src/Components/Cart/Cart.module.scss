@@ -47,7 +47,6 @@
   align-items: center;
   width: 100%;
   background-color: $brand-color-sub;
-  // border-top: .5rem solid $brand-color-main;
   @extend %boxShadow;
   margin-bottom: 2rem;
   padding: .5rem;
@@ -55,11 +54,11 @@
 
 .clear {
   @extend %button;
-  background-color: $color-white ;
-  color: $color-grey-dark;
-  padding: 1rem 2rem;
+  background-color: transparent;
+  text-decoration: underline;
+  color: $color-black;
+  font-size: 1.5rem;
   margin: .5rem;
-  border-radius: 1rem;
   justify-self: stretch;
   transition: all .3s ease;
 

@@ -7,8 +7,8 @@ import SectionDisplay from "../Layout/SectionDisplay";
 import CallToAction from "../UI/CallToAction";
 import CartItem from "./CartItem";
 import { backToTop } from "../../utils/utils";
-import classes from "./Cart.module.scss";
 import CartEmpty from "./CartEmpty";
+import classes from "./Cart.module.scss";
 
 const displayImage = "/img/cart.jpg";
 
@@ -40,9 +40,14 @@ const CartSection = () => {
   };
 
   const handleClearCart = () => {
-    dispatch(cartActions.clearCart());
-    cartNotification('Your cart has been cleared! Kindly visit our products section to shop again.');
-    backToTop();
+    const proceed = window.confirm('This action will clear out all the items in your cart. Are you sure you want to proceed?');
+    
+    if (proceed) {
+      dispatch(cartActions.clearCart());
+      cartNotification('Your cart has been cleared! Kindly visit our products section to shop again.');
+
+      backToTop();
+    }
   };
 
   const productsToDisplay = products

@@ -14,20 +14,20 @@ const CustomerServiceSection = () => {
 
   const content = (
     <div className={classes.content}>
-      <div id="contact" className={classes.section}>
+      <div className={classes.section}>
         <h1>Contact Us</h1>
         <p>You would have been able to contact the store owners here... but this is a demo ecommerce web app project by Tolu!</p>
         <p>Go to <a href="https://toluls.com" target="_blank" rel="noreferrer">toluls.com</a></p>
       </div>
-      <div id="privacy" className={classes.section}>
+      <div className={classes.section}>
         <h1>Privacy Policy</h1>
         <p>Bussiness privacy policy here</p>
       </div>
-      <div id="returns" className={classes.section}>
+      <div className={classes.section}>
         <h1>Returns</h1>
         <p>Information on returns here</p>
       </div>
-      <div id="delivery" className={classes.section}>
+      <div className={classes.section}>
         <h1>Delivery</h1>
         <p>Details about delivery should be here</p>
       </div>

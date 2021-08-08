@@ -8,4 +8,14 @@
   top: 0;
   left: 0;
   z-index: 110;
+  animation: slidein .3s;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -1,0 +1,47 @@
+@import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
+@import '../../sass/mixins.scss';
+
+.container {
+  width: 100%;
+}
+
+.orderdItem {
+  display: flex;
+  margin-bottom: .8rem;
+  @extend %boxShadow;
+}
+
+.detailsContainer {
+  padding: .4rem;
+  padding-left: .8rem;
+  flex: 1;
+  & * {
+    padding-right: .5rem;
+  }
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  width: 4rem;
+  height: 6rem;
+  padding: .5rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  background-color: $brand-color-sub;
+  color: $brand-color-main;
+  padding: .7rem 1.8rem;
+  font-weight: 600;
+}

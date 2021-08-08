@@ -1,2 +1,43 @@
 @import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
 @import '../../sass/mixins.scss';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+
+  & input {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid $brand-color-sub;
+    border-radius: 1rem;
+    outline: none;
+  }
+
+  & button {
+    @extend %button;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: $brand-color-sub;
+    transition: all .3s ease;
+
+    &:disabled {
+      background-color: $color-grey;
+      color: $color-grey-dark;
+      cursor: not-allowed;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  & p {
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 1.7rem;
+    padding-top: 0;
+    color: $brand-color-main;
+  }
+}

@@ -38,11 +38,17 @@
     margin: 1.5rem;
     border-radius: 1rem; 
     flex: 0 25rem; 
+    transition: all .3s ease;
     cursor: pointer;
   }
 
   & img {
     width: 100%;
+  }
+
+  
+  &:hover {
+    transform: scale(.99);
   }
 }
 
