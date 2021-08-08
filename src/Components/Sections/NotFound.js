@@ -14,7 +14,7 @@ const NotFound = () => {
 
   const content = (
     <div className={classes.content}>
-      <div id="contact" className={classes.section}>
+      <div className={classes.section}>
         <h1>Page Not Found</h1>
         <p>The page you requested is not available. Since you are here... kindly scroll down to look through our products or click on <strong>'Today's Deals'</strong> in the menu to see some great deals!</p>
       </div>
