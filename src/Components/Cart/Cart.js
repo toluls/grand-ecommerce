@@ -40,9 +40,14 @@ const CartSection = () => {
   };
 
   const handleClearCart = () => {
-    dispatch(cartActions.clearCart());
-    cartNotification('Your cart has been cleared! Kindly visit our products section to shop again.');
-    backToTop();
+    const proceed = window.confirm('This action will clear out all the items in your cart. Are you sure you want to proceed?');
+    
+    if (proceed) {
+      dispatch(cartActions.clearCart());
+      cartNotification('Your cart has been cleared! Kindly visit our products section to shop again.');
+
+      backToTop();
+    }
   };
 
   const productsToDisplay = products
