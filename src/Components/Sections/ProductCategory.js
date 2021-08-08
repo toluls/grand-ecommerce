@@ -1,13 +1,13 @@
 import React from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProductDisplay from '../Products/ProductDisplay';
 import BannerDisplay from '../UI/BannerDisplay';
+import NotFound from '../Sections/NotFound';
 import classes from './ProductCategory.module.scss';
 
 const ProductCategory = () => {
   const params = useParams();
-  const history = useHistory();
   const urlCategory = params.productCategory;
 
   const image = `/img/${urlCategory}1.jpg`;
@@ -30,8 +30,7 @@ const ProductCategory = () => {
     );
   }
   else {
-    history.replace('/products');
-    return null;
+    return <NotFound />;
   }
 }
 
