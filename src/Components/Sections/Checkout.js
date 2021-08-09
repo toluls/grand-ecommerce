@@ -61,7 +61,7 @@ const CheckoutSection = () => {
       <div className={classes.thanks}>
         <p>{`Hi ${order.data.name}! Thanks for coming this far.`}</p>
         <p>My name is <strong>Tolu</strong> and I am a creative, passionate front-end developer. You can visit my website at <a href="https://toluls.com" target="_blank" rel="noreferrer">toluls.com</a></p>
-        <p>Since this is a demo project I built for my portfolio, I won't be saving or transimiting your data for product and price authentication on a backend server. </p>
+        <p>Since this is a demo project I built for my portfolio, I won't be saving or transmitting your data for product and price authentication on a backend server. </p>
         <p>You can view your order below and click on the cart icon to see your cart content.</p>
       </div>
       <h1 className={classes.header}>Customer Details</h1>        
