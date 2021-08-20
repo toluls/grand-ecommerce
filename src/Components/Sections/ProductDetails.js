@@ -15,7 +15,7 @@ const displayImage = "/img/details.jpg";
 const ProductDetails = () => {
   const [itemQuantity, setItemQuantity] = useState(1);
   const params = useParams();
-  const urlProductId = parseInt(params.productId);
+  const urlProductId = params.productId;
   const isLoading = useSelector((state) => state.products.isLoading);
   const storeProducts = useSelector((state) => state.products.products);
   const cartIsTouched = useSelector((state) => state.cart.cartIsTouched);
