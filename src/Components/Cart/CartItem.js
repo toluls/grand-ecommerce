@@ -3,14 +3,17 @@ import { Link } from 'react-router-dom';
 import classes from './CartItem.module.scss';
 
 const CartItem = props => {
+  const productString = props.name.slice(0,50).replaceAll(' ', '_');
+  const productUrl = `/products/${productString}/${props.id}`;
+
   return (
     <div className={classes.container}>
       <div className={classes.above}>
-        <Link to={`/products/id/${props.id}`} className={classes.imageContainer}>
+        <Link to={productUrl} className={classes.imageContainer}>
           <img src={props.image} alt={`${props.name.slice(0, 10)} ...`} className={classes.image} />
         </Link>
         <div className={classes.details}>
-          <Link  to={`/products/id/${props.id}`}><p className={classes.name}>{`${props.name.slice(0, 35)} ...`}</p></Link>
+          <Link  to={productUrl}><p className={classes.name}>{`${props.name.slice(0, 35)} ...`}</p></Link>
           <p className={classes.price}>₦ {props.price}</p>
           <p className={classes.remove} onClick={props.onDeleteClick}>Remove</p>
         </div>
