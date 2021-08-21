@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { formatProductUrl } from '../../utils/utils';
 import classes from './ProductCard.module.scss';
 
 const ProductCard = props => {
-  const productString = props.name.slice(0,50).replaceAll(' ', '_');
+  const productUrl = formatProductUrl(props);
 
   return (
-    <Link to={`/products/${productString}/${props.id}`} className={classes.product}>
+    <Link to={productUrl} className={classes.product}>
       <div className={classes.products}>
         <div className={classes.imageContainer}>
         <img src={props.image} alt={props.name} className={classes.image}></img>

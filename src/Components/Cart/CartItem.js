@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { formatProductUrl } from '../../utils/utils';
 import classes from './CartItem.module.scss';
 
 const CartItem = props => {
-  const productString = props.name.slice(0,50).replaceAll(' ', '_');
-  const productUrl = `/products/${productString}/${props.id}`;
+  const productUrl = formatProductUrl(props);
 
   return (
     <div className={classes.container}>
