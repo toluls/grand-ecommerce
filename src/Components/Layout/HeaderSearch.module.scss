@@ -1,9 +1,19 @@
 @import '../../sass/variables.scss';
+@import '../../sass/placeholders.scss';
 @import '../../sass/mixins.scss';
 
-.search {
-  display: flex;
+.searchContainer {
+  width: 100%;
   padding: 1rem;
+}
+
+.searchBarContent {
+  width: 100%;
+  position: relative;
+}
+
+.searchBar {
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
@@ -41,4 +51,16 @@
   &:hover {
     background-color: $brand-color-sub-light;
   }
+}
+
+.dropdown {
+  background-color: $color-white;
+  padding: 1rem;
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  width: 100%;
+  padding-bottom: 5rem;
+  @extend %boxShadow;
+  z-index: 50;
 }
