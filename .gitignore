@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /functions
+/src/Components/Admin
 /.pnp
 .pnp.js
 

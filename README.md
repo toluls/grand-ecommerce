@@ -4,6 +4,8 @@
 
 ### This project was built with React/Redux.
 
+### The backend was built using firebase.
+
 ### View online at: [grand.com.ng](https://grand.com.ng)
 
 ![Grand Ecommerce Screenshot](public/img/grand-screenshot.png)
