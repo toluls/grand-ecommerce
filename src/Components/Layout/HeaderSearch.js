@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useDispatch } from 'react-redux';
+import { uiActions } from '../../Store/ui-slice';
 import SearchedProducts from '../Products/SearchedProducts';
 import { SearchIcon } from "../UI/Icons";
 import classes from "./HeaderSearch.module.scss";
@@ -6,6 +8,7 @@ import classes from "./HeaderSearch.module.scss";
 const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const searchRef = useRef();
+  const dispatch = useDispatch();
 
   const searchStarted = searchTerm.trim().length > 1;
 
@@ -18,7 +21,11 @@ const HeaderSearch = () => {
   }
 
   const searchClickHandler = () => {
-    alert('Kindly enter a search term and select from the options in the dropdown.')
+    dispatch(uiActions.postNotification({
+      title: 'Action required',
+      message: 'Kindly enter a search term and select from the options in the dropdown.',
+      time: 6
+    }));
   }
 
   useEffect(() => {
