@@ -7,7 +7,7 @@ const HeaderSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const searchRef = useRef();
 
-  const searchStarted = searchTerm.trim().length > 2;
+  const searchStarted = searchTerm.trim().length > 1;
 
   const clearSearchHandler = () => {
     setSearchTerm('');
