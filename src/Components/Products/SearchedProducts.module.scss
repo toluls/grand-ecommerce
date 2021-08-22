@@ -1,0 +1,21 @@
+@import '../../sass/variables.scss';
+
+.container {
+  font-size: 1.6rem;
+}
+
+.items {
+  list-style: none;
+  padding: .9rem;
+  padding-left: 0;
+  border-bottom: 1px solid $color-grey;
+
+  & a, a:visited {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  & a:hover {
+    color: $brand-color-main;
+  }
+}
