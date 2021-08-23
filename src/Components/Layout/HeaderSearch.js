@@ -22,7 +22,7 @@ const HeaderSearch = () => {
 
   const searchClickHandler = () => {
     dispatch(uiActions.postNotification({
-      title: 'Action required',
+      title: 'Action Required',
       message: 'Kindly enter a search term and select from the options in the dropdown.',
       time: 6
     }));
