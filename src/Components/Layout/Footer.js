@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
       <div className={classes.credit}>
         <p>
-          © 2021 Grand Fashion.{" "}
+          © 2022 Grand Fashion.{" "}
           <a href="https://toluls.com" target="_blank" rel="noreferrer">
             Developed by Tolulope &#10148; toluls.com
           </a>
