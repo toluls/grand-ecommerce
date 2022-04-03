@@ -6,10 +6,6 @@ html {
   font-size: 10px;
 }
 
-// :root {
-//   --brand-color-main: #31004A;
-// }
-
 *, *::before, *::after {
   padding: 0;
   margin: 0;
@@ -19,6 +15,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.7rem;
+  width: 100%;
 }
 
 // modify alice carousel dots
